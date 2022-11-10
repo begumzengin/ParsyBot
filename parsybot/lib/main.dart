@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parsybot/screens/landing/landing_page.dart';
+import 'package:parsybot/screens/landing/light_landing_page.dart';
 
 void main() {
   runApp(MyApp());

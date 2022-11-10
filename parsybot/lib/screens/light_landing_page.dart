@@ -5,6 +5,10 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: lightBackground,
+        ),
         backgroundColor: lightBackground,
         body: Center(
             child: Column(

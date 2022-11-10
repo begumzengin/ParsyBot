@@ -13,29 +13,22 @@ class LandingPage extends StatelessWidget {
             Image.asset('assets/parsybot_images/parsy_light_landing.png',
                 width: 188.0, height: 185.0),
             SizedBox(height: 30),
-            ElevatedButton(
-                onPressed: () {},
-                child: Text('Sor bana!',
-                    style: TextStyle(color: Colors.white, fontSize: 18)),
-                style: ElevatedButton.styleFrom(backgroundColor: cinnabar))
+            SizedBox(
+              width: 204.0,
+              height: 46.0,
+              child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Sor bana!',
+                      style: TextStyle(color: Colors.white, fontSize: 18)),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(cinnabar),
+                    shadowColor: MaterialStateProperty.all<Color>(sinbad),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0))),
+                  )),
+            )
           ],
         )));
   }
 }
-
-/*
-Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 500.0),
-                child: Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: cinnabar,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Center(
-                        child: Text('Sor bana!',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                            )))))
-*/

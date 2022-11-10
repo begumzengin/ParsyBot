@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parsybot/screens/landing/light_landing_page.dart';
+import 'package:parsybot/screens/light_landing_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'ParsyBot',
       home: LandingPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

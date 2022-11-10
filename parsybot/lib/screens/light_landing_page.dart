@@ -5,7 +5,10 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffd8e8e8),
-    );
+        backgroundColor: lightBackground,
+        body: Center(
+          child: Image.asset('assets/parsybot_images/parsy_light_landing.png',
+              width: 188.0, height: 185.0),
+        ));
   }
 }

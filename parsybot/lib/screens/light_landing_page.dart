@@ -8,6 +8,9 @@ class LandingPage extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: lightBackground,
+          leading: GestureDetector(
+              onTap: () {},
+              child: Icon(Icons.language, color: pickledBluewood, size: 30.0)),
         ),
         backgroundColor: lightBackground,
         body: Center(
@@ -36,3 +39,14 @@ class LandingPage extends StatelessWidget {
         )));
   }
 }
+
+/*
+actions: <Widget>[
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.language,
+                    color: pickledBluewood,
+                  ))
+            ]
+ */

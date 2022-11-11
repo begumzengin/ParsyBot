@@ -55,17 +55,3 @@ class LandingPage extends StatelessWidget {
         )));
   }
 }
-
-/*
-actions: <Widget>[
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.language,
-                    color: pickledBluewood,
-                  ))
-            ]
-            GestureDetector(
-              onTap: () {},
-              child: Icon(Icons.language, color: pickledBluewood, size: 30.0)
- */

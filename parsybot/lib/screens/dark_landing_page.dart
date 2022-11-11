@@ -12,7 +12,23 @@ class DarkLandingPage extends StatelessWidget {
           onPressed: () {},
           icon: Icon(Icons.language, color: changeLanguage, size: 30.0),
         ),
+        actions: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(right: 30.0),
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.admin_panel_settings,
+                    color: landingButtons, size: 30.0),
+              )),
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.light_mode, color: landingButtons, size: 30.0),
+              )),
+        ],
       ),
+      backgroundColor: darkBgLanding,
     );
   }
 }

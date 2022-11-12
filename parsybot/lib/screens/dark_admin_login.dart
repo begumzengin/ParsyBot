@@ -8,7 +8,7 @@ class DarkAdminLogin extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: darkBgLanding,
-          iconTheme: IconThemeData(color: darkPrimary),
+          iconTheme: IconThemeData(color: buttonColor),
         ),
         backgroundColor: darkBgLanding,
         body: SafeArea(
@@ -16,13 +16,13 @@ class DarkAdminLogin extends StatelessWidget {
                 child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.admin_panel_settings, size: 70, color: darkPrimary),
+            Icon(Icons.admin_panel_settings, size: 70, color: changeLanguage),
             SizedBox(height: 30),
             //sistem yöneticisi girişi
             Text(
               'Sistem Yöneticisi Girişi',
               style: TextStyle(
-                color: buttonColor,
+                color: Colors.grey.shade400,
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
               ),
@@ -79,7 +79,7 @@ class DarkAdminLogin extends StatelessWidget {
                         style: TextStyle(color: Colors.white, fontSize: 15)),
                     style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(cinnabar),
+                          MaterialStateProperty.all<Color>(darkPrimary),
                       shadowColor: MaterialStateProperty.all<Color>(sinbad),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(

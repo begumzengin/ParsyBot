@@ -16,7 +16,7 @@ class AdminLogin extends StatelessWidget {
                 child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.admin_panel_settings, size: 60, color: pickledBluewood),
+            Icon(Icons.admin_panel_settings, size: 70, color: pickledBluewood),
             SizedBox(height: 30),
             //sistem yöneticisi girişi
             Text(
@@ -35,7 +35,7 @@ class AdminLogin extends StatelessWidget {
                 child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xFFAAB0B5),
-                      border: Border.all(color: Colors.white),
+                      border: Border.all(color: pickledBluewood),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Padding(
@@ -54,7 +54,7 @@ class AdminLogin extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xFFAAB0B5),
-                    border: Border.all(color: Colors.white),
+                    border: Border.all(color: pickledBluewood),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Padding(

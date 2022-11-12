@@ -1,6 +1,7 @@
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
+import 'package:parsybot/screens/dark_admin_login.dart';
 
 class DarkLandingPage extends StatelessWidget {
   @override
@@ -17,7 +18,12 @@ class DarkLandingPage extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.only(right: 30.0),
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => DarkAdminLogin())));
+                  },
                   icon: Icon(Icons.admin_panel_settings,
                       color: landingButtons, size: 30.0),
                 )),

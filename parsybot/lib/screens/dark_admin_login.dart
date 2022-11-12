@@ -1,7 +1,7 @@
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 
-class AdminLogin extends StatelessWidget {
+class DarkAdminLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

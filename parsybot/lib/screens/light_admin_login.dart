@@ -23,9 +23,10 @@ class AdminLogin extends StatelessWidget {
               ),
             ),
             SizedBox(height: 50),
+
             //kullanıcı adı
             Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: const EdgeInsets.symmetric(horizontal: 300.0),
                 child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xFFAAB0B5),
@@ -39,7 +40,27 @@ class AdminLogin extends StatelessWidget {
                             border: InputBorder.none,
                             hintText: 'Kullanıcı adı',
                           ),
-                        ))))
+                        )))),
+            SizedBox(height: 20),
+
+            //şifre
+            Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 300.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xFFAAB0B5),
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Şifre',
+                        ),
+                      )),
+                ))
           ],
         ))));
   }

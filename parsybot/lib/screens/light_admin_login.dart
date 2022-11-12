@@ -1,6 +1,7 @@
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/screens/dark_admin_login.dart';
+import 'package:parsybot/screens/light_landing_page.dart';
 
 class AdminLogin extends StatelessWidget {
   @override
@@ -10,6 +11,11 @@ class AdminLogin extends StatelessWidget {
           elevation: 0,
           backgroundColor: lightBackground,
           iconTheme: IconThemeData(color: pickledBluewood),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios, color: pickledBluewood),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => LandingPage())),
+          ),
           actions: <Widget>[
             Padding(
                 padding: EdgeInsets.only(right: 30.0),

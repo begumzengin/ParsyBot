@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:parsybot/screens/dark_landing_page.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 
 class DarkAdminLogin extends StatelessWidget {
@@ -11,7 +12,11 @@ class DarkAdminLogin extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: darkBgLanding,
-          iconTheme: IconThemeData(color: buttonColor),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios, color: buttonColor),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => DarkLandingPage())),
+          ),
           actions: <Widget>[
             Padding(
                 padding: EdgeInsets.only(right: 30.0),

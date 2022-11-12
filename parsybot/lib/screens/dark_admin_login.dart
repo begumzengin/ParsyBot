@@ -1,5 +1,8 @@
+import 'dart:html';
+
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:parsybot/screens/light_admin_login.dart';
 
 class DarkAdminLogin extends StatelessWidget {
   @override
@@ -9,6 +12,23 @@ class DarkAdminLogin extends StatelessWidget {
           elevation: 0,
           backgroundColor: darkBgLanding,
           iconTheme: IconThemeData(color: buttonColor),
+          actions: <Widget>[
+            Padding(
+                padding: EdgeInsets.only(right: 30.0),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.language, color: buttonColor, size: 30),
+                )),
+            Padding(
+                padding: EdgeInsets.only(right: 30.0),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AdminLogin()));
+                  },
+                  icon: Icon(Icons.light_mode, color: buttonColor, size: 30),
+                ))
+          ],
         ),
         backgroundColor: darkBgLanding,
         body: SafeArea(
@@ -35,7 +55,7 @@ class DarkAdminLogin extends StatelessWidget {
                 child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xFFAAB0B5),
-                      border: Border.all(color: pickledBluewood),
+                      border: Border.all(color: changeLanguage),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Padding(
@@ -54,7 +74,7 @@ class DarkAdminLogin extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xFFAAB0B5),
-                    border: Border.all(color: pickledBluewood),
+                    border: Border.all(color: changeLanguage),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Padding(
@@ -80,7 +100,8 @@ class DarkAdminLogin extends StatelessWidget {
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(darkPrimary),
-                      shadowColor: MaterialStateProperty.all<Color>(sinbad),
+                      shadowColor:
+                          MaterialStateProperty.all<Color>(buttonColor),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0))),

@@ -1,5 +1,6 @@
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:parsybot/screens/dark_admin_login.dart';
 
 class AdminLogin extends StatelessWidget {
   @override
@@ -9,6 +10,25 @@ class AdminLogin extends StatelessWidget {
           elevation: 0,
           backgroundColor: lightBackground,
           iconTheme: IconThemeData(color: pickledBluewood),
+          actions: <Widget>[
+            Padding(
+                padding: EdgeInsets.only(right: 30.0),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.language, color: pickledBluewood, size: 30),
+                )),
+            Padding(
+                padding: EdgeInsets.only(right: 30.0),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DarkAdminLogin()));
+                  },
+                  icon: Icon(Icons.dark_mode, color: pickledBluewood, size: 30),
+                ))
+          ],
         ),
         backgroundColor: lightBackground,
         body: SafeArea(

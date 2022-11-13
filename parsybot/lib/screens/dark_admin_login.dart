@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/screens/dark_landing_page.dart';

@@ -75,7 +75,55 @@ class LandingPage extends StatelessWidget {
                             onPressed: () {},
                             child: Text('S.S.S.',
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 10)),
+                                    color: Colors.white, fontSize: 12)),
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all<Color>(cinnabar),
+                              shadowColor:
+                                  MaterialStateProperty.all<Color>(sinbad),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(18.0))),
+                            )),
+                        ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Harita',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12)),
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all<Color>(cinnabar),
+                              shadowColor:
+                                  MaterialStateProperty.all<Color>(sinbad),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(18.0))),
+                            )),
+                        ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Menü QR',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12)),
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all<Color>(cinnabar),
+                              shadowColor:
+                                  MaterialStateProperty.all<Color>(sinbad),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(18.0))),
+                            )),
+                        ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Rehber',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12)),
                             style: ButtonStyle(
                               backgroundColor:
                                   MaterialStateProperty.all<Color>(cinnabar),

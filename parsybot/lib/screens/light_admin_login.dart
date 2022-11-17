@@ -57,7 +57,7 @@ class AdminLogin extends StatelessWidget {
 
             //kullanıcı adı
             Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 350.0),
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xFFAAB0B5),
@@ -76,7 +76,7 @@ class AdminLogin extends StatelessWidget {
 
             //şifre
             Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 350.0),
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xFFAAB0B5),
@@ -93,7 +93,7 @@ class AdminLogin extends StatelessWidget {
                         ),
                       )),
                 )),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
 
             //giriş yap butonu
             SizedBox(

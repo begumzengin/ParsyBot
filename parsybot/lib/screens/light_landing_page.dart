@@ -62,7 +62,33 @@ class LandingPage extends StatelessWidget {
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18.0))),
                   )),
-            )
+            ),
+            SizedBox(height: 200),
+            Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                    padding: EdgeInsets.all(15),
+                    child: ButtonBar(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        ElevatedButton(
+                            onPressed: () {},
+                            child: Text('S.S.S.',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10)),
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all<Color>(cinnabar),
+                              shadowColor:
+                                  MaterialStateProperty.all<Color>(sinbad),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(18.0))),
+                            ))
+                      ],
+                    )))
           ],
         )));
   }

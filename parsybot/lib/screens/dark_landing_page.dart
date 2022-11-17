@@ -57,13 +57,83 @@ class DarkLandingPage extends StatelessWidget {
               ),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(darkPrimary),
-                shadowColor: MaterialStateProperty.all<Color>(userBackdrop),
+                shadowColor: MaterialStateProperty.all<Color>(sinbad),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18.0))),
               ),
             ),
-          )
+          ),
+          SizedBox(height: 270),
+          Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                  padding: EdgeInsets.all(5),
+                  child: ButtonBar(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      ElevatedButton(
+                          onPressed: () {},
+                          child: Text('S.S.S.',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15)),
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(darkPrimary),
+                            shadowColor:
+                                MaterialStateProperty.all<Color>(sinbad),
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0))),
+                          )),
+                      ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Harita',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15)),
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(darkPrimary),
+                            shadowColor:
+                                MaterialStateProperty.all<Color>(sinbad),
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0))),
+                          )),
+                      ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Menü QR',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15)),
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(darkPrimary),
+                            shadowColor:
+                                MaterialStateProperty.all<Color>(sinbad),
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0))),
+                          )),
+                      ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Rehber',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15)),
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(darkPrimary),
+                            shadowColor:
+                                MaterialStateProperty.all<Color>(sinbad),
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0))),
+                          ))
+                    ],
+                  )))
         ])));
   }
 }

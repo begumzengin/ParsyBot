@@ -121,7 +121,9 @@ class DarkLandingPage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(18.0))),
                           )),
                       ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            _launchRehberUrl();
+                          },
                           child: Text('Rehber',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 15)),
@@ -143,6 +145,13 @@ class DarkLandingPage extends StatelessWidget {
 
 Future<void> _launchHaritaUrl() async {
   final Uri _url = Uri.parse('https://www.baskent.edu.tr/sanalgezinti/');
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $_url';
+  }
+}
+
+Future<void> _launchRehberUrl() async {
+  final Uri _url = Uri.parse('http://truva.baskent.edu.tr/rehber/');
   if (!await launchUrl(_url)) {
     throw 'Could not launch $_url';
   }

@@ -11,9 +11,12 @@ class MenuQR extends StatelessWidget {
         ),
         body: Center(
             child: InteractiveViewer(
+          constrained: false,
+          /*
           boundaryMargin: const EdgeInsets.all(20.0),
           minScale: 0.1,
           maxScale: 2,
+          */
           child: Image.asset(
             'assets/parsybot_images/menuqr.jpeg',
             /*

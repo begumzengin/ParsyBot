@@ -142,7 +142,7 @@ class DarkLandingPage extends StatelessWidget {
 }
 
 Future<void> _launchHaritaUrl() async {
-  final Uri _url = Uri.parse('https://www.baskent.edu.tr/tr/kampuste-yasam');
+  final Uri _url = Uri.parse('https://www.baskent.edu.tr/sanalgezinti/');
   if (!await launchUrl(_url)) {
     throw 'Could not launch $_url';
   }

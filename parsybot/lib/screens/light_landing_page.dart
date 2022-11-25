@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:parsybot/screens/dark_landing_page.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'menuqr_page.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -101,7 +102,12 @@ class LandingPage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(18.0))),
                           )),
                       ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MenuQR()));
+                          },
                           child: Text('Menü QR',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 15)),

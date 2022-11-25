@@ -84,7 +84,9 @@ class LandingPage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(18.0))),
                           )),
                       ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            _launchHaritaUrl();
+                          },
                           child: Text('Harita',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 15)),
@@ -133,5 +135,12 @@ class LandingPage extends StatelessWidget {
         ],
       )),
     );
+  }
+}
+
+Future<void> _launchHaritaUrl() async {
+  final Uri _url = Uri.parse('https://www.baskent.edu.tr/tr/kampuste-yasam');
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $_url';
   }
 }

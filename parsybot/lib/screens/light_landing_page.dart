@@ -19,6 +19,7 @@ class LandingPage extends StatelessWidget {
             icon: Icon(Icons.language, color: pickledBluewood, size: 30.0)),
             */
         leading: DropdownLanguage(),
+        leadingWidth: 70,
         actions: <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 30.0),

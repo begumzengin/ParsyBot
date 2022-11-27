@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:parsybot/screens/dark_landing_page.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:parsybot/dropdown_language.dart';
 import 'menuqr_page.dart';
 
 class LandingPage extends StatelessWidget {
@@ -12,9 +13,12 @@ class LandingPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: lightBackground,
+        /*
         leading: IconButton(
             onPressed: () {},
             icon: Icon(Icons.language, color: pickledBluewood, size: 30.0)),
+            */
+        leading: DropdownLanguage(),
         actions: <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 30.0),

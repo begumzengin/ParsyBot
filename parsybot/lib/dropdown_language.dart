@@ -18,6 +18,8 @@ class _DropdownLanguageState extends State<DropdownLanguage> {
     return DropdownButton<String>(
       value: dropdownValue,
       icon: const Icon(Icons.language),
+      iconEnabledColor: pickledBluewood,
+      isExpanded: true,
       elevation: 16,
       style: const TextStyle(color: cinnabar),
       underline: Container(

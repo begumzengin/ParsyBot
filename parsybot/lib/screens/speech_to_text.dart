@@ -1,6 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
+import 'package:parsybot/constants.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class HighlightSpeech extends StatefulWidget {
@@ -13,14 +14,14 @@ class _HighlightSpeechState extends State<HighlightSpeech> {
     'library': HighlightedWord(
         onTap: () => print('library'),
         textStyle: const TextStyle(
-          color: Colors.red,
+          color: darkPrimary,
           fontWeight: FontWeight.bold,
           fontSize: 32.0,
         )),
     'engineering': HighlightedWord(
       onTap: () => print('engineering'),
       textStyle: const TextStyle(
-        color: Colors.green,
+        color: cinnabar,
         fontWeight: FontWeight.bold,
         fontSize: 32.0,
       ),
@@ -28,7 +29,7 @@ class _HighlightSpeechState extends State<HighlightSpeech> {
     'department': HighlightedWord(
       onTap: () => print('department'),
       textStyle: const TextStyle(
-        color: Colors.brown,
+        color: pickledBluewood,
         fontWeight: FontWeight.bold,
         fontSize: 32.0,
       ),
@@ -37,7 +38,7 @@ class _HighlightSpeechState extends State<HighlightSpeech> {
 
   late stt.SpeechToText _speech;
   bool _isListening = false;
-  String _text = "press the button and start speaking";
+  String _text = "Press the button and start speaking";
   double _confidence = 1.0;
 
   @override
@@ -52,6 +53,7 @@ class _HighlightSpeechState extends State<HighlightSpeech> {
         appBar: AppBar(
           title:
               Text('Confidence ${(_confidence * 100.0).toStringAsFixed(1)}%'),
+          backgroundColor: sanMarino,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: AvatarGlow(
@@ -62,6 +64,7 @@ class _HighlightSpeechState extends State<HighlightSpeech> {
           repeatPauseDuration: const Duration(milliseconds: 100),
           repeat: true,
           child: FloatingActionButton(
+            backgroundColor: cinnabar,
             onPressed: _listen,
             child: Icon(_isListening ? Icons.mic : Icons.mic_none),
           ),

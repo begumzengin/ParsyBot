@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.7
   speech_to_text: ^6.1.1
+  avatar_glow: ^2.0.2
 
 dev_dependencies:
   flutter_test:

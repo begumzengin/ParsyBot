@@ -2,6 +2,7 @@ import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/screens/dark_admin_login.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
+import 'package:parsybot/screens/light_admin_page.dart';
 
 class AdminLogin extends StatelessWidget {
   @override
@@ -100,7 +101,12 @@ class AdminLogin extends StatelessWidget {
                 width: 167,
                 height: 40,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LightAdminPage()));
+                    },
                     child: Text('Giriş yap',
                         style: TextStyle(color: Colors.white, fontSize: 15)),
                     style: ButtonStyle(

@@ -1,6 +1,5 @@
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:parsybot/screens/dark_admin_login.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
 
 class LightAdminPage extends StatelessWidget {

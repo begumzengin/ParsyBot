@@ -53,8 +53,8 @@ class LandingPage extends StatelessWidget {
               width: 188.0, height: 185.0),
           SizedBox(height: 30),
           SizedBox(
-            width: 204.0,
-            height: 46.0,
+            width: 245.0,
+            height: 60.0,
             child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -62,7 +62,7 @@ class LandingPage extends StatelessWidget {
                       MaterialPageRoute(
                           builder: ((context) => HighlightSpeech())));
                 },
-                child: Text('Sor bana!',
+                child: Text('Merak ettiğin her şeyi sorabilirsin!',
                     style: TextStyle(color: Colors.white, fontSize: 18)),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(cinnabar),

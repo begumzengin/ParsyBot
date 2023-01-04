@@ -2,7 +2,7 @@ import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/screens/dark_landing_page.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
-import 'package:parsybot/screens/speech_to_text.dart';
+import 'package:parsybot/screens/light_conversation.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:parsybot/dropdown_language.dart';
 import 'menuqr_page.dart';
@@ -60,7 +60,7 @@ class LandingPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: ((context) => HighlightSpeech())));
+                          builder: ((context) => LightConversation())));
                 },
                 child: Text('Merak ettiğin her şeyi sorabilirsin!',
                     style: TextStyle(color: Colors.white, fontSize: 18)),

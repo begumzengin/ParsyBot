@@ -37,7 +37,7 @@ class LightAdminPage extends StatelessWidget {
                 height: 55,
                 child: ElevatedButton(
                     onPressed: () {},
-                    child: Text('Veri Seti Ekleme',
+                    child: Text('Veri Kümesi Ekleme',
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     style: ButtonStyle(
                       backgroundColor:
@@ -53,7 +53,7 @@ class LightAdminPage extends StatelessWidget {
                 height: 55,
                 child: ElevatedButton(
                     onPressed: () {},
-                    child: Text('Veri Seti Silme',
+                    child: Text('Veri Kümesi Silme',
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     style: ButtonStyle(
                       backgroundColor:
@@ -69,7 +69,7 @@ class LightAdminPage extends StatelessWidget {
                 height: 55,
                 child: ElevatedButton(
                     onPressed: () {},
-                    child: Text('Veri Seti Güncelleme',
+                    child: Text('Veri Kümesi Güncelleme',
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     style: ButtonStyle(
                       backgroundColor:
@@ -85,7 +85,7 @@ class LightAdminPage extends StatelessWidget {
                 height: 55,
                 child: ElevatedButton(
                     onPressed: () {},
-                    child: Text('Model Eğitme',
+                    child: Text('Model Eğitimi',
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     style: ButtonStyle(
                       backgroundColor:

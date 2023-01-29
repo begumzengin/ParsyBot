@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:parsybot/screens/dark_landing_page.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:parsybot/screens/light_conversation.dart';
+import 'package:parsybot/util/light_drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:parsybot/dropdown_language.dart';
 import 'menuqr_page.dart';
@@ -14,13 +15,14 @@ class LandingPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: lightBackground,
+        iconTheme: IconThemeData(color: pickledBluewood),
         /*
         leading: IconButton(
             onPressed: () {},
             icon: Icon(Icons.language, color: pickledBluewood, size: 30.0)),
             */
-        leading: DropdownLanguage(),
-        leadingWidth: 70,
+        //leading: DropdownLanguage(),
+        //leadingWidth: 70,
         actions: <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 30.0),
@@ -47,8 +49,9 @@ class LandingPage extends StatelessWidget {
       backgroundColor: lightBackground,
       body: Center(
           child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        //mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(height: 90),
           Image.asset('assets/parsybot_images/parsy_light_landing.png',
               width: 188.0, height: 185.0),
           SizedBox(height: 30),
@@ -62,17 +65,20 @@ class LandingPage extends StatelessWidget {
                       MaterialPageRoute(
                           builder: ((context) => LightConversation())));
                 },
-                child: Text('Merak ettiğin her şeyi sorabilirsin!',
-                    style: TextStyle(color: Colors.white, fontSize: 18)),
+                child: Text(
+                  'Merak ettiğin her şeyi sorabilirsin!',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  textAlign: TextAlign.center,
+                ),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(cinnabar),
                   shadowColor: MaterialStateProperty.all<Color>(sinbad),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0))),
+                          borderRadius: BorderRadius.circular(15.0))),
                 )),
           ),
-          SizedBox(height: 270),
+          /*
           Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
@@ -150,23 +156,10 @@ class LandingPage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(18.0))),
                           ))
                     ],
-                  )))
+                  )))*/
         ],
       )),
+      drawer: LightDrawer(),
     );
-  }
-}
-
-Future<void> _launchHaritaUrl() async {
-  final Uri _url = Uri.parse('https://www.baskent.edu.tr/sanalgezinti/');
-  if (!await launchUrl(_url)) {
-    throw 'Could not launch $_url';
-  }
-}
-
-Future<void> _launchRehberUrl() async {
-  final Uri _url = Uri.parse('http://truva.baskent.edu.tr/rehber/');
-  if (!await launchUrl(_url)) {
-    throw 'Could not launch $_url';
   }
 }

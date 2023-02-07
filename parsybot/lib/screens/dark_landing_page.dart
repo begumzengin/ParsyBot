@@ -13,10 +13,11 @@ class DarkLandingPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: darkBgLanding,
+        /*
         leading: IconButton(
           onPressed: () {},
           icon: Icon(Icons.language, color: landingButtons, size: 30.0),
-        ),
+        ),*/
         actions: <Widget>[
           Padding(
               padding: EdgeInsets.only(right: 30.0),
@@ -65,7 +66,6 @@ class DarkLandingPage extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 270),
         /*
           Align(
               alignment: Alignment.bottomCenter,

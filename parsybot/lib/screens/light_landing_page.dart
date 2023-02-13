@@ -19,7 +19,7 @@ class LandingPage extends StatelessWidget {
         iconTheme: IconThemeData(color: pickledBluewood),
         actions: <Widget>[
           Padding(
-            padding: EdgeInsets.only(right: 30.0),
+            padding: EdgeInsets.only(right: 10.0),
             child: IconButton(
                 onPressed: () {
                   Navigator.push(context,
@@ -29,7 +29,14 @@ class LandingPage extends StatelessWidget {
                     color: pickledBluewood, size: 30.0)),
           ),
           Padding(
-            padding: EdgeInsets.only(right: 20.0),
+            padding: EdgeInsets.only(right: 10.0),
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.language, color: pickledBluewood, size: 30.0),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(right: 10.0),
             child: IconButton(
               onPressed: () {
                 Navigator.push(context,
@@ -37,7 +44,7 @@ class LandingPage extends StatelessWidget {
               },
               icon: Icon(Icons.dark_mode, color: pickledBluewood, size: 30.0),
             ),
-          )
+          ),
         ],
       ),
       backgroundColor: lightBackground,
@@ -46,7 +53,7 @@ class LandingPage extends StatelessWidget {
         children: [
           SizedBox(height: 90),
           Image.asset('assets/parsybot_images/parsy_light_landing.png',
-              width: 188.0, height: 185.0),
+              width: 200.0, height: 198.0),
           SizedBox(height: 30),
           SizedBox(
             width: 245.0,

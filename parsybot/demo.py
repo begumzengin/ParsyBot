@@ -38,7 +38,7 @@ str_content += str_content.join(map(str,content))
 extracted_content = str_content.replace('\n','').lower()
 wobullet_content = re.sub("madde [0-9]*", "",extracted_content)
 final_content = re.sub(" ?\([^)]+\)", "",wobullet_content)
-final = final_content.replace("[a-z]+\)","")
+final = final_content.replace('a)','').replace('b)','').replace('c)','').replace('ç)','').replace('d)','').replace('e)','').replace('f)','').replace('g)','').replace('ğ)','').replace('h)','')
 
 
 # nlp
@@ -61,10 +61,10 @@ while(1):
       print(random.choice(closing_responses))
     elif input_sentence == 'quit': break
     else:
-      result = nlp(question=input_sentence, context=final_content)
+      result = nlp(question=input_sentence, context=final)
       if float (result['score']) > 0.00005:
          print(f"-{result['answer']}, score: {result['score']}")
       else:
-        print(f"-{result['answer']}, score: {result['score']},Tam olarak anlayamadım")
+        print(f"-{result['answer']}, score: {result['score']},Tam olarak anlayamadım ya da bu bilgiye sahip değilim.")
   except KeyError:
     print("Error: Encountered unknown word.")

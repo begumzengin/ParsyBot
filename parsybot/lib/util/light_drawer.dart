@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:parsybot/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -70,59 +71,100 @@ class LightDrawer extends StatelessWidget {
               ),
               child: Text(
                 'Kısayollar',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.asap(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20),
               ),
             ),
           ),
           ListTile(
-            title: Text('Sık Sorulan Sorular'),
+            title: Text(
+              'Sık Sorulan Sorular',
+              style: GoogleFonts.muktaVaani(
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.6,
+                  fontSize: 15),
+            ),
             onTap: () {},
           ),
           ListTile(
-            title: Text('Harita'),
+            title: Text('Harita',
+                style: GoogleFonts.muktaVaani(
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.6,
+                    fontSize: 15)),
             onTap: () {
               _launchHaritaUrl();
             },
           ),
           ListTile(
-            title: Text('Menü QR'),
+            title: Text('Menü QR',
+                style: GoogleFonts.muktaVaani(
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.6,
+                    fontSize: 15)),
             onTap: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => MenuQR()));
             },
           ),
           ListTile(
-            title: Text('Rehber'),
+            title: Text('Rehber',
+                style: GoogleFonts.muktaVaani(
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.6,
+                    fontSize: 15)),
             onTap: () {
               _launchRehberUrl();
             },
           ),
           ListTile(
-            title: Text('Etkinlikler'),
+            title: Text('Etkinlikler',
+                style: GoogleFonts.muktaVaani(
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.6,
+                    fontSize: 15)),
             onTap: () {
               _launchEtkinlikUrl();
             },
           ),
           ListTile(
-            title: Text('Haberler'),
+            title: Text('Haberler',
+                style: GoogleFonts.muktaVaani(
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.6,
+                    fontSize: 15)),
             onTap: () {
               _launchHaberUrl();
             },
           ),
           ListTile(
-            title: Text('İdari Birimler'),
+            title: Text('İdari Birimler',
+                style: GoogleFonts.muktaVaani(
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.6,
+                    fontSize: 15)),
             onTap: () {
               _launchIdariBirimUrl();
             },
           ),
           ListTile(
-            title: Text('Kampüste Yaşam'),
+            title: Text('Kampüste Yaşam',
+                style: GoogleFonts.muktaVaani(
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.6,
+                    fontSize: 15)),
             onTap: () {
               _launchKampusteYasamUrl();
             },
           ),
           ListTile(
-            title: Text('Kurumsal'),
+            title: Text('Kurumsal',
+                style: GoogleFonts.muktaVaani(
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.6,
+                    fontSize: 15)),
             onTap: () {
               _launchKurumsalUrl();
             },

@@ -27,20 +27,6 @@ class LightDrawer extends StatelessWidget {
     }
   }
 
-  Future<void> _launchKampusteYasamUrl() async {
-    final Uri _url = Uri.parse('https://www.baskent.edu.tr/tr/kampuste-yasam');
-    if (!await launchUrl(_url)) {
-      throw 'Could not launch $_url';
-    }
-  }
-
-  Future<void> _launchKurumsalUrl() async {
-    final Uri _url = Uri.parse('https://www.baskent.edu.tr/tr/kurumsal');
-    if (!await launchUrl(_url)) {
-      throw 'Could not launch $_url';
-    }
-  }
-
   Future<void> _launchHaritaUrl() async {
     final Uri _url = Uri.parse('https://www.baskent.edu.tr/sanalgezinti/');
     if (!await launchUrl(_url)) {
@@ -149,26 +135,110 @@ class LightDrawer extends StatelessWidget {
               _launchIdariBirimUrl();
             },
           ),
-          ListTile(
-            title: Text('Kampüste Yaşam',
-                style: GoogleFonts.muktaVaani(
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.6,
-                    fontSize: 15)),
-            onTap: () {
-              _launchKampusteYasamUrl();
-            },
-          ),
-          ListTile(
-            title: Text('Kurumsal',
-                style: GoogleFonts.muktaVaani(
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.6,
-                    fontSize: 15)),
-            onTap: () {
-              _launchKurumsalUrl();
-            },
-          ),
+          ExpansionTile(
+              title: Text("Fakülteler",
+                  style: GoogleFonts.muktaVaani(
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 0.6,
+                      fontSize: 15)),
+              children: <Widget>[
+                ListTile(
+                  title: Text("Diş Hekimliği Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Eczacılık Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Eğitim Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Fen-Edebiyat Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Güzel Sanatlar Tasarım ve Mimarlık Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Hukuk Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("İktisadi ve İdari Bilimler Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("İletişim Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Mühendislik Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Sağlık Bilimleri Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Ticari Bilimler Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Tıp Fakültesi",
+                      style: GoogleFonts.muktaVaani(
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.6,
+                          fontSize: 15)),
+                  onTap: () {},
+                ),
+              ]),
         ],
       ),
     );

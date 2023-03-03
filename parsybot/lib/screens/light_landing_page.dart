@@ -5,9 +5,6 @@ import 'package:parsybot/screens/dark_landing_page.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:parsybot/screens/light_conversation.dart';
 import 'package:parsybot/util/light_drawer.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:parsybot/dropdown_language.dart';
-import 'menuqr_page.dart';
 
 class LandingPage extends StatelessWidget {
   @override

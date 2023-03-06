@@ -43,6 +43,7 @@ dependencies:
   highlight_text: ^1.6.0
   google_fonts: ^4.0.3
   intl: ^0.17.0
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:

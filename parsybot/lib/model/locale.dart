@@ -5,7 +5,7 @@ class LocaleModel extends ChangeNotifier {
 
   Locale? get locale => _locale;
 
-  void changeLocale(Locale locale) {
+  void set(Locale locale) {
     _locale = locale;
     notifyListeners();
   }

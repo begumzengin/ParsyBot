@@ -5,10 +5,18 @@ import 'package:parsybot/screens/dark_landing_page.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:parsybot/screens/light_conversation.dart';
 import 'package:parsybot/util/light_drawer.dart';
+import '../l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
+import '../model/locale.dart';
 
 class LandingPage extends StatelessWidget {
+  const LandingPage({super.key});
+
   @override
   Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
+    var selectedLocale = Localizations.localeOf(context).toString();
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -26,12 +34,33 @@ class LandingPage extends StatelessWidget {
                     color: pickledBluewood, size: 30.0)),
           ),
           Padding(
-            padding: EdgeInsets.only(right: 10.0),
-            child: IconButton(
+              padding: EdgeInsets.only(right: 10.0),
+              child: Consumer<LocaleModel>(
+                builder: (context, localeModel, child) => DropdownButton(
+                    value: selectedLocale,
+                    items: [
+                      DropdownMenuItem(
+                        child: Text('🇬🇧'),
+                        value: 'en',
+                      ),
+                      DropdownMenuItem(
+                        child: Text('🇹🇷'),
+                        value: 'tr',
+                      ),
+                    ],
+                    onChanged: (String? value) {
+                      if (value != null) {
+                        localeModel.set(Locale(value));
+                      }
+                    }),
+              )
+              /*
+            IconButton(
               onPressed: () {},
               icon: Icon(Icons.language, color: pickledBluewood, size: 30.0),
             ),
-          ),
+            */
+              ),
           Padding(
             padding: EdgeInsets.only(right: 10.0),
             child: IconButton(
@@ -63,7 +92,7 @@ class LandingPage extends StatelessWidget {
                           builder: ((context) => LightConversation())));
                 },
                 child: Text(
-                  'Merak ettiğin her şeyi sorabilirsin!',
+                  t.parsyGreeting,
                   //style: TextStyle(color: Colors.white, fontSize: 18),
                   style: GoogleFonts.mulish(color: Colors.white, fontSize: 18),
                   textAlign: TextAlign.center,

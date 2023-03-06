@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parsybot/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../l10n/app_localizations.dart';
 
 import '../screens/menuqr_page.dart';
 
@@ -45,6 +46,8 @@ class LightDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
+
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -56,7 +59,7 @@ class LightDrawer extends StatelessWidget {
                 color: sanMarino,
               ),
               child: Text(
-                'Kısayollar',
+                t.shortcutsTitle,
                 style: GoogleFonts.asap(
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
@@ -66,7 +69,7 @@ class LightDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Text(
-              'Sık Sorulan Sorular',
+              t.faqTitle,
               style: GoogleFonts.muktaVaani(
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.6,
@@ -75,7 +78,7 @@ class LightDrawer extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            title: Text('Harita',
+            title: Text(t.mapTitle,
                 style: GoogleFonts.muktaVaani(
                     fontWeight: FontWeight.w600,
                     letterSpacing: 0.6,
@@ -85,7 +88,7 @@ class LightDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Menü QR',
+            title: Text(t.menusTitle,
                 style: GoogleFonts.muktaVaani(
                     fontWeight: FontWeight.w600,
                     letterSpacing: 0.6,
@@ -96,7 +99,7 @@ class LightDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Rehber',
+            title: Text(t.phonebookTitle,
                 style: GoogleFonts.muktaVaani(
                     fontWeight: FontWeight.w600,
                     letterSpacing: 0.6,
@@ -106,7 +109,7 @@ class LightDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Etkinlikler',
+            title: Text(t.eventsTitle,
                 style: GoogleFonts.muktaVaani(
                     fontWeight: FontWeight.w600,
                     letterSpacing: 0.6,
@@ -116,7 +119,7 @@ class LightDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Haberler',
+            title: Text(t.newsTitle,
                 style: GoogleFonts.muktaVaani(
                     fontWeight: FontWeight.w600,
                     letterSpacing: 0.6,
@@ -126,7 +129,7 @@ class LightDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('İdari Birimler',
+            title: Text(t.administrationTitle,
                 style: GoogleFonts.muktaVaani(
                     fontWeight: FontWeight.w600,
                     letterSpacing: 0.6,
@@ -136,14 +139,14 @@ class LightDrawer extends StatelessWidget {
             },
           ),
           ExpansionTile(
-              title: Text("Fakülteler",
+              title: Text(t.facultiesTitle,
                   style: GoogleFonts.muktaVaani(
                       fontWeight: FontWeight.w600,
                       letterSpacing: 0.6,
                       fontSize: 15)),
               children: <Widget>[
                 ListTile(
-                  title: Text("Diş Hekimliği Fakültesi",
+                  title: Text(t.dentistryTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -151,7 +154,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("Eczacılık Fakültesi",
+                  title: Text(t.pharmacyTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -159,7 +162,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("Eğitim Fakültesi",
+                  title: Text(t.educationTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -167,7 +170,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("Fen-Edebiyat Fakültesi",
+                  title: Text(t.scienceAndLettersTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -175,7 +178,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("Güzel Sanatlar Tasarım ve Mimarlık Fakültesi",
+                  title: Text(t.fineArtsDesignArchTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -183,7 +186,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("Hukuk Fakültesi",
+                  title: Text(t.lawTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -191,7 +194,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("İktisadi ve İdari Bilimler Fakültesi",
+                  title: Text(t.economicsAdministrativeTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -199,7 +202,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("İletişim Fakültesi",
+                  title: Text(t.communicationTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -207,7 +210,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("Mühendislik Fakültesi",
+                  title: Text(t.engineeringTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -215,7 +218,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("Sağlık Bilimleri Fakültesi",
+                  title: Text(t.healthSciencesTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -223,7 +226,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("Ticari Bilimler Fakültesi",
+                  title: Text(t.commercialScienceTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
@@ -231,7 +234,7 @@ class LightDrawer extends StatelessWidget {
                   onTap: () {},
                 ),
                 ListTile(
-                  title: Text("Tıp Fakültesi",
+                  title: Text(t.medicineTitle,
                       style: GoogleFonts.muktaVaani(
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,

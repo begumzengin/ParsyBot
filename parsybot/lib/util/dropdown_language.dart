@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:parsybot/constants.dart';
+import 'package:parsybot/l10n/app_localizations.dart';
+import 'package:parsybot/model/locale.dart';
 
+/*
 const List<String> languageList = <String>['Türkçe', 'English'];
 
 class DropdownLanguage extends StatefulWidget {
@@ -40,3 +43,21 @@ class _DropdownLanguageState extends State<DropdownLanguage> {
     );
   }
 }
+*/
+
+/*
+class DropdownLanguage extends StatelessWidget {
+  const DropdownLanguage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
+    var selectedLocale = Localizations.localeOf(context).toString();
+
+    
+
+      )
+    );
+  }
+}
+*/

@@ -1,3 +1,25 @@
 {
-    "helloWorld": "Merhaba Dünya"
+    "@@locale": "tr",
+    "parsyGreeting": "Merak ettiğin her şeyi sorabilirsin!",
+    "shortcutsTitle": "Kısayollar",
+    "faqTitle": "Sık Sorulan Sorular",
+    "mapTitle": "Harita",
+    "menusTitle": "Menüler",
+    "phonebookTitle": "Rehber",
+    "eventsTitle": "Etkinlikler",
+    "newsTitle": "Haberler",
+    "administrationTitle": "İdari Birimler",
+    "facultiesTitle": "Fakülteler",
+    "dentistryTitle": "Diş Hekimliği Fakültesi",
+    "pharmacyTitle": "Eczacılık Fakültesi",
+    "educationTitle": "Eğitim Fakültesi",
+    "scienceAndLettersTitle": "Fen-Edebiyat Fakültesi",
+    "fineArtsDesignArchTitle": "Güzel Sanatlar Tasarım ve Mimarlık Fakültesi",
+    "lawTitle": "Hukuk Fakültesi",
+    "economicsAdministrativeTitle": "İktisadi ve İdari Bilimler Fakültesi",
+    "communicationTitle": "İletişim Fakültesi",
+    "engineeringTitle": "Mühendislik Fakültesi",
+    "healthSciencesTitle": "Sağlık Bilimleri Fakültesi",
+    "commercialScienceTitle": "Ticari Bilimler Fakültesi",
+    "medicineTitle": "Tıp Fakültesi"
 }

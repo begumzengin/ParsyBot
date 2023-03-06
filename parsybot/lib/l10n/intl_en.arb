@@ -1,3 +1,25 @@
 {
-    "helloWorld": "Hello World"
+    "@@locale": "en",
+    "parsyGreeting": "You can ask me anything you're curious about!",
+    "shortcutsTitle": "Shortcuts",
+    "faqTitle": "Frequently Asked Questions",
+    "mapTitle": "Map",
+    "menusTitle": "Menus",
+    "phonebookTitle": "Phonebook",
+    "eventsTitle": "Events",
+    "newsTitle": "News",
+    "administrationTitle": "Administrative Units",
+    "facultiesTitle": "Faculties",
+    "dentistryTitle": "Faculty of Dentistry",
+    "pharmacyTitle": "Faculty of Pharmacy",
+    "educationTitle": "Faculty of Education",
+    "scienceAndLettersTitle": "Faculty of Science and Letters",
+    "fineArtsDesignArchTitle": "Faculty of Fine Arts, Design and Architecture",
+    "lawTitle": "Faculty of Law",
+    "economicsAdministrativeTitle": "Faculty of Economics and Administrative Sciences ",
+    "communicationTitle": "Faculty of Communication ",
+    "engineeringTitle": "Faculty of Engineering",
+    "healthSciencesTitle": "Faculty of Health Sciences",
+    "commercialScienceTitle": "Faculty of Commercial Sciences",
+    "medicineTitle": "Faculty of Medicine"
 }

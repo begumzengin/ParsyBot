@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parsybot/constants.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
 import 'package:provider/provider.dart';
 import 'package:parsybot/model/locale.dart';
@@ -32,6 +33,9 @@ class MyApp extends StatelessWidget {
             '/': (context) => LandingPage(),
           },
           debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            scaffoldBackgroundColor: sanMarino,
+          ),
           initialRoute: '/',
         ),
       ),

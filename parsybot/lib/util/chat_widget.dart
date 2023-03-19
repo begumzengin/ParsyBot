@@ -13,16 +13,16 @@ class ChatWidget extends StatelessWidget {
     return Column(
       children: [
         Material(
-            color: chatIndex == 0 ? sanMarino : sinbad,
+            color: chatIndex == 1 ? sanMarino : pickledBluewood,
             child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.asset(
-                      chatIndex == 0
-                          ? 'assets/parsybot_images/usericon1'
-                          : 'assets/parsybot_images/parsy_kafasi',
+                      chatIndex == 1
+                          ? 'assets/parsybot_images/usericon2.png'
+                          : 'assets/parsybot_images/parsy_kafasi.png',
                       height: 30,
                       width: 30,
                     ),

@@ -1,6 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:parsybot/screens/chat_screen.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:parsybot/screens/light_conversation.dart';
 import 'package:parsybot/util/light_drawer.dart';
@@ -39,11 +40,11 @@ class LandingPage extends StatelessWidget {
                     value: selectedLocale,
                     items: [
                       DropdownMenuItem(
-                        child: Text('🇬🇧'),
+                        child: Text('🇬🇧', style: TextStyle(fontSize: 22)),
                         value: 'en',
                       ),
                       DropdownMenuItem(
-                        child: Text('🇹🇷'),
+                        child: Text('🇹🇷', style: TextStyle(fontSize: 22)),
                         value: 'tr',
                       ),
                     ],
@@ -82,10 +83,14 @@ class LandingPage extends StatelessWidget {
             height: 60.0,
             child: ElevatedButton(
                 onPressed: () {
+                  /*
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: ((context) => LightConversation())));
+                          */
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: ((context) => ChatScreen())));
                 },
                 child: Text(
                   t.parsyGreeting,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextWidget extends StatelessWidget {
   const TextWidget(
@@ -17,10 +18,10 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       label,
-      style: TextStyle(
+      style: GoogleFonts.raleway(
         color: color ?? Colors.white,
         fontSize: fontSize,
-        fontWeight: fontWeight ?? FontWeight.w300,
+        fontWeight: fontWeight ?? FontWeight.w400,
       ),
     );
   }

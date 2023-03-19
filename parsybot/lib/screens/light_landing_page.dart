@@ -1,7 +1,6 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:parsybot/screens/dark_landing_page.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:parsybot/screens/light_conversation.dart';
 import 'package:parsybot/util/light_drawer.dart';
@@ -64,10 +63,7 @@ class LandingPage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(right: 10.0),
             child: IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DarkLandingPage()));
-              },
+              onPressed: () {},
               icon: Icon(Icons.dark_mode, color: pickledBluewood, size: 30.0),
             ),
           ),

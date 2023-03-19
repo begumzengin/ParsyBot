@@ -1,6 +1,5 @@
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:parsybot/screens/dark_admin_login.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
 import 'package:parsybot/screens/light_admin_page.dart';
 
@@ -27,12 +26,7 @@ class AdminLogin extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.only(right: 30.0),
                 child: IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => DarkAdminLogin()));
-                  },
+                  onPressed: () {},
                   icon: Icon(Icons.dark_mode, color: pickledBluewood, size: 30),
                 ))
           ],

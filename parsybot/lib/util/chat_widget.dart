@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parsybot/constants.dart';
 import 'text_widget.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class ChatWidget extends StatelessWidget {
   const ChatWidget({super.key, required this.msg, required this.chatIndex});
@@ -15,7 +16,7 @@ class ChatWidget extends StatelessWidget {
         Material(
             color: chatIndex == 1 ? sanMarino : pickledBluewood,
             child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

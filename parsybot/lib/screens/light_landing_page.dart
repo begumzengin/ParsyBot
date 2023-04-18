@@ -24,7 +24,7 @@ class LandingPage extends StatelessWidget {
 
     if (targetPlatform == TargetPlatform.android ||
         targetPlatform == TargetPlatform.iOS ||
-        screenWidth < 600) {
+        screenWidth < 893) {
       showDrawer = true;
     } else {
       showDrawer = false;
@@ -88,12 +88,12 @@ class LandingPage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 90),
-            if (kIsWeb)
+            if (screenWidth > 893)
               Image.asset('assets/parsybot_images/parsy_light_landing.png',
-                  width: 250.0, height: 250.0)
+                  width: 200.0, height: 198.0)
             else
               Image.asset('assets/parsybot_images/parsy_light_landing.png',
-                  width: 200.0, height: 198.0),
+                  width: 250.0, height: 250.0),
             SizedBox(height: 30),
             SizedBox(
               width: 245.0,
@@ -127,7 +127,7 @@ class LandingPage extends StatelessWidget {
                   )),
             ),
             SizedBox(height: 200),
-            if (kIsWeb) ButtonRow(),
+            if (screenWidth > 893) ButtonRow(),
           ],
         ),
       ),

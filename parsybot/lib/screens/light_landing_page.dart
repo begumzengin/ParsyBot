@@ -20,11 +20,13 @@ class LandingPage extends StatelessWidget {
     var selectedLocale = Localizations.localeOf(context).toString();
     final targetPlatform = Theme.of(context).platform;
     final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     bool showDrawer;
 
     if (targetPlatform == TargetPlatform.android ||
         targetPlatform == TargetPlatform.iOS ||
-        screenWidth < 893) {
+        screenWidth < 905 ||
+        screenHeight < 680) {
       showDrawer = true;
     } else {
       showDrawer = false;
@@ -88,7 +90,7 @@ class LandingPage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 90),
-            if (screenWidth > 893)
+            if (screenWidth > 905)
               Image.asset('assets/parsybot_images/parsy_light_landing.png',
                   width: 200.0, height: 198.0)
             else
@@ -126,8 +128,8 @@ class LandingPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15.0))),
                   )),
             ),
-            SizedBox(height: 200),
-            if (screenWidth > 893) ButtonRow(),
+            if (screenWidth > 905 && screenHeight > 680) SizedBox(height: 200),
+            if (screenWidth > 905 && screenHeight > 680) ButtonRow(),
           ],
         ),
       ),

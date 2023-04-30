@@ -21,5 +21,8 @@
     "engineeringTitle": "Mühendislik Fakültesi",
     "healthSciencesTitle": "Sağlık Bilimleri Fakültesi",
     "commercialScienceTitle": "Ticari Bilimler Fakültesi",
-    "medicineTitle": "Tıp Fakültesi"
+    "medicineTitle": "Tıp Fakültesi",
+    "adminLoginTitle": "System Yöneticisi Girişi",
+    "passwordHintText": "Şifre",
+    "loginButton": "Giriş yap"
 }

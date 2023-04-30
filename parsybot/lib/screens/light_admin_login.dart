@@ -4,6 +4,10 @@ import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
 import 'package:parsybot/screens/light_admin_page.dart';
+import 'package:provider/provider.dart';
+import '../model/locale.dart';
+
+import '../l10n/app_localizations.dart';
 
 class AdminLogin extends StatefulWidget {
   AdminLogin({super.key});
@@ -16,43 +20,6 @@ class _AdminLoginState extends State<AdminLogin> {
   //text editing controllers
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-
-  /*
-  void signUserIn() async {
-    // show loading circle
-    showDialog(
-      context: context,
-      builder: (context) {
-        return const Center(
-          child: CircularProgressIndicator(),
-        );
-      },
-    );
-
-    // try sign in
-    try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: emailController.text,
-        password: passwordController.text,
-      );
-      // pop the loading circle
-      Navigator.pop(context);
-    } on FirebaseAuthException catch (e) {
-      // pop the loading circle
-      Navigator.pop(context);
-      // WRONG EMAIL
-      if (e.code == 'user-not-found') {
-        // show error to user
-        wrongEmailMessage();
-      }
-
-      // WRONG PASSWORD
-      else if (e.code == 'wrong-password') {
-        // show error to user
-        wrongPasswordMessage();
-      }
-    }
-  }
 
   // wrong email message popup
   void wrongEmailMessage() {
@@ -89,10 +56,11 @@ class _AdminLoginState extends State<AdminLogin> {
       },
     );
   }
-  */
 
   @override
   Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
+    var selectedLocale = Localizations.localeOf(context).toString();
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
@@ -128,7 +96,7 @@ class _AdminLoginState extends State<AdminLogin> {
             SizedBox(height: 30),
             //sistem yöneticisi girişi
             Text(
-              'Sistem Yöneticisi Girişi',
+              t.adminLoginTitle,
               style: TextStyle(
                 color: Color(0xFF2F3A58),
                 fontWeight: FontWeight.bold,
@@ -173,7 +141,7 @@ class _AdminLoginState extends State<AdminLogin> {
                         obscureText: true,
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Şifre',
+                          hintText: t.passwordHintText,
                         ),
                       )),
                 )),
@@ -205,11 +173,20 @@ class _AdminLoginState extends State<AdminLogin> {
                             builder: (context) => LightAdminPage(),
                           ),
                         );
-                      } catch (e) {
-                        print('Sign in failed: $e');
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'user-not-found') {
+                          // show error to user
+                          wrongEmailMessage();
+                        }
+
+                        // WRONG PASSWORD
+                        else if (e.code == 'wrong-password') {
+                          // show error to user
+                          wrongPasswordMessage();
+                        }
                       }
                     },
-                    child: Text('Giriş yap',
+                    child: Text(t.loginButton,
                         style: TextStyle(color: Colors.white, fontSize: 15)),
                     style: ButtonStyle(
                       backgroundColor:

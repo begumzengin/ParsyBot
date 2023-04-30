@@ -69,4 +69,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get medicineTitle => 'Faculty of Medicine';
+
+  @override
+  String get adminLoginTitle => 'System Administrator Login';
+
+  @override
+  String get passwordHintText => 'Password';
+
+  @override
+  String get loginButton => 'Log in';
 }

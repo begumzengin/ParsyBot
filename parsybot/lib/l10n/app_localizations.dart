@@ -224,6 +224,24 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Tıp Fakültesi'**
   String get medicineTitle;
+
+  /// No description provided for @adminLoginTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'System Yöneticisi Girişi'**
+  String get adminLoginTitle;
+
+  /// No description provided for @passwordHintText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Şifre'**
+  String get passwordHintText;
+
+  /// No description provided for @loginButton.
+  ///
+  /// In tr, this message translates to:
+  /// **'Giriş yap'**
+  String get loginButton;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "24395926635",
+    "project_id": "parsybot-b07bf",
+    "storage_bucket": "parsybot-b07bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24395926635:android:aabc7f3b820c0ffeed352e",
+        "android_client_info": {
+          "package_name": "com.example.parsybot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24395926635-ouul4vr5uqvege6bi5sado000tj5nfa5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWZ6tfLga5-46qPf_aYKLIue7UT9I0N-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24395926635-ouul4vr5uqvege6bi5sado000tj5nfa5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "24395926635-fm3k04dehd0rc3a74gcd7917npoc4fgr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.parsybot"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -21,46 +21,13 @@ class _AdminLoginState extends State<AdminLogin> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
-  // wrong email message popup
-  void wrongEmailMessage() {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return const AlertDialog(
-          backgroundColor: Colors.deepPurple,
-          title: Center(
-            child: Text(
-              'Incorrect Email',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        );
-      },
-    );
-  }
-
-  // wrong password message popup
-  void wrongPasswordMessage() {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return const AlertDialog(
-          backgroundColor: Colors.deepPurple,
-          title: Center(
-            child: Text(
-              'Incorrect Password',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        );
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
+    final targetPlatform = Theme.of(context).platform;
+    final screenWidth = MediaQuery.of(context).size.width;
     var t = AppLocalizations.of(context)!;
     var selectedLocale = Localizations.localeOf(context).toString();
+    bool _isValidLogin;
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
@@ -107,7 +74,9 @@ class _AdminLoginState extends State<AdminLogin> {
 
             //kullanıcı adı
             Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: (screenWidth < 680)
+                    ? EdgeInsets.symmetric(horizontal: 25.0)
+                    : EdgeInsets.symmetric(horizontal: 130.0),
                 child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xFFAAB0B5),
@@ -127,7 +96,9 @@ class _AdminLoginState extends State<AdminLogin> {
 
             //şifre
             Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: (screenWidth < 680)
+                    ? EdgeInsets.symmetric(horizontal: 25.0)
+                    : EdgeInsets.symmetric(horizontal: 130.0),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xFFAAB0B5),
@@ -167,23 +138,19 @@ class _AdminLoginState extends State<AdminLogin> {
                           email: emailController.text.trim(),
                           password: passwordController.text.trim(),
                         );
+                        setState(() {
+                          _isValidLogin = true;
+                        });
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => LightAdminPage(),
                           ),
                         );
-                      } on FirebaseAuthException catch (e) {
-                        if (e.code == 'user-not-found') {
-                          // show error to user
-                          wrongEmailMessage();
-                        }
-
-                        // WRONG PASSWORD
-                        else if (e.code == 'wrong-password') {
-                          // show error to user
-                          wrongPasswordMessage();
-                        }
+                      } catch (e) {
+                        setState(() {
+                          _isValidLogin = false;
+                        });
                       }
                     },
                     child: Text(t.loginButton,
@@ -195,7 +162,16 @@ class _AdminLoginState extends State<AdminLogin> {
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0))),
-                    )))
+                    ))),
+            SizedBox(height: 30),
+            if (_isValidLogin = false)
+              Text(
+                'Email or password is not correct',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.red,
+                ),
+              ),
           ],
         ))));
   }

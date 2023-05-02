@@ -24,5 +24,11 @@
     "medicineTitle": "Tıp Fakültesi",
     "adminLoginTitle": "System Yöneticisi Girişi",
     "passwordHintText": "Şifre",
-    "loginButton": "Giriş yap"
+    "loginButton": "Giriş yap",
+    "addDataset": "Veri Kümesi Ekleme",
+    "deleteDataset": "Veri Kümesi Silme",
+    "updateDataset": "Veri Kümesi Güncelleme",
+    "modelTraining": "Model Eğitimi",
+    "existingDatasets": "Mevcut Veri Kümeleri",
+    "uploadDataset": "Veri Kümesi Yükle"
 }

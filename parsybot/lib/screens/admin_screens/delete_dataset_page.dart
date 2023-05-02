@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:parsybot/constants.dart';
 
+import '../../l10n/app_localizations.dart';
+
 class DeleteDatasetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text('Delete a Dataset'),
+        title: Text(t.deleteDataset),
         backgroundColor: sanMarino,
       ),
       backgroundColor: lightBackground,
@@ -17,7 +20,7 @@ class DeleteDatasetPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'Existing Datasets',
+              t.existingDatasets,
               style: TextStyle(
                   fontSize: 23.0,
                   fontWeight: FontWeight.bold,

@@ -24,5 +24,11 @@
     "medicineTitle": "Faculty of Medicine",
     "adminLoginTitle": "System Administrator Login",
     "passwordHintText": "Password",
-    "loginButton": "Log in"
+    "loginButton": "Log in", 
+    "addDataset": "Add Dataset",
+    "deleteDataset": "Delete Dataset",
+    "updateDataset": "Update Dataset",
+    "modelTraining": "Model Training",
+    "existingDatasets": "Existing Datasets",
+    "uploadDataset": "Upload Dataset"
 }

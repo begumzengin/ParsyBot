@@ -242,6 +242,42 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Giriş yap'**
   String get loginButton;
+
+  /// No description provided for @addDataset.
+  ///
+  /// In tr, this message translates to:
+  /// **'Veri Kümesi Ekleme'**
+  String get addDataset;
+
+  /// No description provided for @deleteDataset.
+  ///
+  /// In tr, this message translates to:
+  /// **'Veri Kümesi Silme'**
+  String get deleteDataset;
+
+  /// No description provided for @updateDataset.
+  ///
+  /// In tr, this message translates to:
+  /// **'Veri Kümesi Güncelleme'**
+  String get updateDataset;
+
+  /// No description provided for @modelTraining.
+  ///
+  /// In tr, this message translates to:
+  /// **'Model Eğitimi'**
+  String get modelTraining;
+
+  /// No description provided for @existingDatasets.
+  ///
+  /// In tr, this message translates to:
+  /// **'Mevcut Veri Kümeleri'**
+  String get existingDatasets;
+
+  /// No description provided for @uploadDataset.
+  ///
+  /// In tr, this message translates to:
+  /// **'Veri Kümesi Yükle'**
+  String get uploadDataset;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

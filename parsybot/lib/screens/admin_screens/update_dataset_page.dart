@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:parsybot/constants.dart';
 
+import '../../l10n/app_localizations.dart';
+
 class UpdateDatasetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text('Update Dataset'),
+        title: Text(t.updateDataset),
         backgroundColor: sanMarino,
       ),
       backgroundColor: lightBackground,
@@ -17,7 +20,7 @@ class UpdateDatasetPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'Existing Datasets',
+              t.existingDatasets,
               style: TextStyle(
                   fontSize: 23.0,
                   fontWeight: FontWeight.bold,
@@ -57,7 +60,7 @@ class UpdateDatasetPage extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: ElevatedButton(
                 onPressed: () {},
-                child: Text('Update Dataset'),
+                child: Text(t.updateDataset),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(cinnabar),
                   shadowColor: MaterialStateProperty.all<Color>(sinbad),

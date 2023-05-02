@@ -78,4 +78,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get loginButton => 'Log in';
+
+  @override
+  String get addDataset => 'Add Dataset';
+
+  @override
+  String get deleteDataset => 'Delete Dataset';
+
+  @override
+  String get updateDataset => 'Update Dataset';
+
+  @override
+  String get modelTraining => 'Model Training';
+
+  @override
+  String get existingDatasets => 'Existing Datasets';
+
+  @override
+  String get uploadDataset => 'Upload Dataset';
 }

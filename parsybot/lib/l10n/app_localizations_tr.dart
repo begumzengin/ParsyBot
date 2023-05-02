@@ -78,4 +78,22 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get loginButton => 'Giriş yap';
+
+  @override
+  String get addDataset => 'Veri Kümesi Ekleme';
+
+  @override
+  String get deleteDataset => 'Veri Kümesi Silme';
+
+  @override
+  String get updateDataset => 'Veri Kümesi Güncelleme';
+
+  @override
+  String get modelTraining => 'Model Eğitimi';
+
+  @override
+  String get existingDatasets => 'Mevcut Veri Kümeleri';
+
+  @override
+  String get uploadDataset => 'Veri Kümesi Yükle';
 }

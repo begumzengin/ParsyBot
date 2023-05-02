@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:parsybot/constants.dart';
 
+import '../../l10n/app_localizations.dart';
+
 class AddDatasetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text('Add a Dataset'),
+        title: Text(t.addDataset),
         backgroundColor: sanMarino,
       ),
       backgroundColor: lightBackground,
@@ -17,7 +20,7 @@ class AddDatasetPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'Existing Datasets',
+              t.existingDatasets,
               style: TextStyle(
                   fontSize: 23.0,
                   fontWeight: FontWeight.bold,
@@ -57,7 +60,7 @@ class AddDatasetPage extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: ElevatedButton(
                 onPressed: () {},
-                child: Text('Upload Dataset'),
+                child: Text(t.uploadDataset),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(cinnabar),
                   shadowColor: MaterialStateProperty.all<Color>(sinbad),

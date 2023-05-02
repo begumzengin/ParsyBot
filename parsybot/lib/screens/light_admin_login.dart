@@ -26,7 +26,6 @@ class _AdminLoginState extends State<AdminLogin> {
     final targetPlatform = Theme.of(context).platform;
     final screenWidth = MediaQuery.of(context).size.width;
     var t = AppLocalizations.of(context)!;
-    var selectedLocale = Localizations.localeOf(context).toString();
     bool _isValidLogin;
     return Scaffold(
         appBar: AppBar(
@@ -123,14 +122,6 @@ class _AdminLoginState extends State<AdminLogin> {
                 width: 167,
                 height: 40,
                 child: ElevatedButton(
-                    /*
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LightAdminPage()));
-                    },
-                    */
                     onPressed: () async {
                       try {
                         final userCredential = await FirebaseAuth.instance

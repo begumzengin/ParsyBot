@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parsybot/constants.dart';
+import 'package:parsybot/screens/faq_page.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../l10n/app_localizations.dart';
 
@@ -75,7 +76,10 @@ class LightDrawer extends StatelessWidget {
                   letterSpacing: 0.6,
                   fontSize: 15),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => FaqPage()));
+            },
           ),
           ListTile(
             title: Text(t.mapTitle,

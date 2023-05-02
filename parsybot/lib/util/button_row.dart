@@ -10,7 +10,8 @@ class ButtonRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var t = AppLocalizations.of(context)!;
-    var selectedLocale = Localizations.localeOf(context).toString();
+    final locale = Localizations.localeOf(context);
+    ;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -19,8 +20,9 @@ class ButtonRow extends StatelessWidget {
           height: 40,
           child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => FaqPage()));
+                (locale.languageCode == 'en')
+                    ? Navigator.pushNamed(context, '/faq')
+                    : Navigator.pushNamed(context, '/sss');
               },
               child: Text(t.faqTitle,
                   style: GoogleFonts.mulish(color: Colors.white, fontSize: 15)),

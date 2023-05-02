@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:parsybot/constants.dart';
+import 'package:parsybot/screens/faq_page.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
+import 'package:parsybot/screens/sss_page.dart';
 import 'package:provider/provider.dart';
 import 'package:parsybot/model/locale.dart';
 import 'package:parsybot/l10n/app_localizations.dart';
@@ -37,6 +39,8 @@ class MyApp extends StatelessWidget {
           locale: localeModel.locale,
           routes: {
             '/': (context) => LandingPage(),
+            '/faq': (context) => FaqPage(),
+            '/sss': (context) => SssPage(),
           },
           debugShowCheckedModeBanner: false,
           theme: ThemeData(

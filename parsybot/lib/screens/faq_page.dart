@@ -29,7 +29,7 @@ class FaqPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'FAQ',
+          'Frequently Asked Questions',
         ),
         elevation: 0,
         backgroundColor: sanMarino,

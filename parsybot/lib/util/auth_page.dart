@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
-import 'package:parsybot/screens/light_admin_page.dart';
+import 'package:parsybot/screens/admin_screens/light_admin_page.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});

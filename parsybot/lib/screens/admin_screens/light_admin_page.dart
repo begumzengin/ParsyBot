@@ -1,6 +1,7 @@
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/screens/admin_screens/add_dataset_page.dart';
+import 'package:parsybot/screens/admin_screens/delete_dataset_page.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
 
 class LightAdminPage extends StatelessWidget {
@@ -58,7 +59,12 @@ class LightAdminPage extends StatelessWidget {
                 width: 251,
                 height: 55,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DeleteDatasetPage()));
+                    },
                     child: Text('Veri Kümesi Silme',
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     style: ButtonStyle(

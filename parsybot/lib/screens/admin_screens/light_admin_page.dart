@@ -4,6 +4,8 @@ import 'package:parsybot/screens/admin_screens/add_dataset_page.dart';
 import 'package:parsybot/screens/admin_screens/delete_dataset_page.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
 
+import 'update_dataset_page.dart';
+
 class LightAdminPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -80,7 +82,12 @@ class LightAdminPage extends StatelessWidget {
                 width: 251,
                 height: 55,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => UpdateDatasetPage()));
+                    },
                     child: Text('Veri Kümesi Güncelleme',
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     style: ButtonStyle(

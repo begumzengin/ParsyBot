@@ -1,13 +1,9 @@
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/model/locale.dart';
-import 'package:parsybot/screens/admin_screens/add_dataset_page.dart';
-import 'package:parsybot/screens/admin_screens/delete_dataset_page.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
 import 'package:provider/provider.dart';
-
 import '../../l10n/app_localizations.dart';
-import 'update_dataset_page.dart';
 
 class LightAdminPage extends StatelessWidget {
   @override
@@ -50,87 +46,105 @@ class LightAdminPage extends StatelessWidget {
         backgroundColor: lightBackground,
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              SizedBox(
-                width: 251,
-                height: 55,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => AddDatasetPage()));
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  t.existingDatasets,
+                  style: TextStyle(
+                      fontSize: 23.0,
+                      fontWeight: FontWeight.bold,
+                      color: pickledBluewood),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 3,
+                        offset: Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  margin: EdgeInsets.all(16.0),
+                  child: ListView.builder(
+                    itemCount: 5, // replace with actual dataset count
+                    itemBuilder: (BuildContext context, int index) {
+                      return ListTile(
+                        title: Text('Dataset ${index + 1}'),
+                        trailing: Wrap(
+                          spacing: 10,
+                          children: <Widget>[
+                            Icon(Icons.delete),
+                            Icon(Icons.edit),
+                            Icon(Icons.arrow_forward),
+                          ],
+                        ),
+                        onTap: () {
+                          // navigate to dataset details page
+                        },
+                      );
                     },
-                    child: Text(t.addDataset,
-                        style: TextStyle(color: Colors.white, fontSize: 18)),
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(cinnabar),
-                      shadowColor: MaterialStateProperty.all<Color>(sinbad),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0))),
-                    )),
+                  ),
+                ),
               ),
               SizedBox(
-                width: 251,
-                height: 55,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => DeleteDatasetPage()));
-                    },
-                    child: Text(t.deleteDataset,
-                        style: TextStyle(color: Colors.white, fontSize: 18)),
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(cinnabar),
-                      shadowColor: MaterialStateProperty.all<Color>(sinbad),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0))),
-                    )),
+                height: 30,
               ),
-              SizedBox(
-                width: 251,
-                height: 55,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => UpdateDatasetPage()));
-                    },
-                    child: Text(t.updateDataset,
-                        style: TextStyle(color: Colors.white, fontSize: 18)),
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(cinnabar),
-                      shadowColor: MaterialStateProperty.all<Color>(sinbad),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0))),
-                    )),
-              ),
-              SizedBox(
-                width: 251,
-                height: 55,
-                child: ElevatedButton(
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: <
+                  Widget>[
+                ElevatedButton(
                     onPressed: () {},
-                    child: Text(t.modelTraining,
-                        style: TextStyle(color: Colors.white, fontSize: 18)),
+                    child: Text(t.uploadDataset),
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(cinnabar),
                       shadowColor: MaterialStateProperty.all<Color>(sinbad),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0))),
+                              borderRadius: BorderRadius.circular(15.0))),
                     )),
-              ),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Text(t.deleteDataset),
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(cinnabar),
+                      shadowColor: MaterialStateProperty.all<Color>(sinbad),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0))),
+                    )),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Text(t.updateDataset),
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(cinnabar),
+                      shadowColor: MaterialStateProperty.all<Color>(sinbad),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0))),
+                    )),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Text(t.modelTraining),
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(cinnabar),
+                      shadowColor: MaterialStateProperty.all<Color>(sinbad),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0))),
+                    )),
+              ]),
+              SizedBox(height: 20)
             ],
           ),
         ));

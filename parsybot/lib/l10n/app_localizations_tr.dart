@@ -71,7 +71,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get medicineTitle => 'Tıp Fakültesi';
 
   @override
-  String get adminLoginTitle => 'System Yöneticisi Girişi';
+  String get adminLoginTitle => 'Sistem Yöneticisi Girişi';
 
   @override
   String get passwordHintText => 'Şifre';

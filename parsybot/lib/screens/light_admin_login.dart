@@ -26,6 +26,7 @@ class _AdminLoginState extends State<AdminLogin> {
     final targetPlatform = Theme.of(context).platform;
     final screenWidth = MediaQuery.of(context).size.width;
     var t = AppLocalizations.of(context)!;
+    var selectedLocale = Localizations.localeOf(context).toString();
     bool _isValidLogin;
     return Scaffold(
         appBar: AppBar(
@@ -34,10 +35,25 @@ class _AdminLoginState extends State<AdminLogin> {
           iconTheme: IconThemeData(color: pickledBluewood),
           actions: <Widget>[
             Padding(
-                padding: EdgeInsets.only(right: 30.0),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.language, color: pickledBluewood, size: 30),
+                padding: EdgeInsets.only(right: 10.0),
+                child: Consumer<LocaleModel>(
+                  builder: (context, localeModel, child) => DropdownButton(
+                      value: selectedLocale,
+                      items: [
+                        DropdownMenuItem(
+                          child: Text('🇬🇧', style: TextStyle(fontSize: 22)),
+                          value: 'en',
+                        ),
+                        DropdownMenuItem(
+                          child: Text('🇹🇷', style: TextStyle(fontSize: 22)),
+                          value: 'tr',
+                        ),
+                      ],
+                      onChanged: (String? value) {
+                        if (value != null) {
+                          localeModel.set(Locale(value));
+                        }
+                      }),
                 )),
             Padding(
                 padding: EdgeInsets.only(right: 30.0),

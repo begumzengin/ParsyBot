@@ -228,7 +228,7 @@ abstract class AppLocalizations {
   /// No description provided for @adminLoginTitle.
   ///
   /// In tr, this message translates to:
-  /// **'System Yöneticisi Girişi'**
+  /// **'Sistem Yöneticisi Girişi'**
   String get adminLoginTitle;
 
   /// No description provided for @passwordHintText.

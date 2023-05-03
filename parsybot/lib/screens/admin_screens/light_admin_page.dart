@@ -20,11 +20,6 @@ class LightAdminPage extends StatelessWidget {
           elevation: 0,
           backgroundColor: lightBackground,
           iconTheme: IconThemeData(color: pickledBluewood),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios, color: pickledBluewood),
-            onPressed: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LandingPage())),
-          ),
           actions: <Widget>[
             Padding(
                 padding: EdgeInsets.only(right: 10.0),

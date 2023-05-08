@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../l10n/app_localizations.dart';
 import '../constants.dart';
-import '../screens/faq_page.dart';
 
 class ButtonRow extends StatelessWidget {
   const ButtonRow({super.key});

@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:parsybot/screens/light_landing_page.dart';
 import 'package:parsybot/screens/admin_screens/light_admin_page.dart';
 import 'package:provider/provider.dart';
 import '../model/locale.dart';

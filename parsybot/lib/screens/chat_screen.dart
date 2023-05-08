@@ -1,6 +1,5 @@
 import '../constants.dart';
 import '../util/chat_widget.dart';
-import '../util/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 

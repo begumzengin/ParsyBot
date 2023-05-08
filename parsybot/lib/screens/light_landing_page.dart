@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:parsybot/screens/chat_screen.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:parsybot/util/button_row.dart';
-//import 'package:parsybot/screens/light_conversation.dart';
 import 'package:parsybot/util/light_drawer.dart';
 import '../l10n/app_localizations.dart';
 import 'package:provider/provider.dart';

@@ -1,7 +1,6 @@
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/model/locale.dart';
-import 'package:parsybot/screens/light_landing_page.dart';
 import 'package:provider/provider.dart';
 import '../../l10n/app_localizations.dart';
 

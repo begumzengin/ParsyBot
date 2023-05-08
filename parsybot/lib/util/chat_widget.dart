@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:parsybot/constants.dart';
 import 'text_widget.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
 
 class ChatWidget extends StatelessWidget {
   const ChatWidget({super.key, required this.msg, required this.chatIndex});

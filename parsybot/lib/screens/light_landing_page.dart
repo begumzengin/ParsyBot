@@ -9,9 +9,14 @@ import '../l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import '../model/locale.dart';
 
-class LandingPage extends StatelessWidget {
+class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
 
+  @override
+  State<LandingPage> createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     var t = AppLocalizations.of(context)!;
@@ -47,33 +52,27 @@ class LandingPage extends StatelessWidget {
                     color: pickledBluewood, size: 30.0)),
           ),
           Padding(
-              padding: EdgeInsets.only(right: 10.0),
-              child: Consumer<LocaleModel>(
-                builder: (context, localeModel, child) => DropdownButton(
-                    value: selectedLocale,
-                    items: [
-                      DropdownMenuItem(
-                        child: Text('🇬🇧', style: TextStyle(fontSize: 22)),
-                        value: 'en',
-                      ),
-                      DropdownMenuItem(
-                        child: Text('🇹🇷', style: TextStyle(fontSize: 22)),
-                        value: 'tr',
-                      ),
-                    ],
-                    onChanged: (String? value) {
-                      if (value != null) {
-                        localeModel.set(Locale(value));
-                      }
-                    }),
-              )
-              /*
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.language, color: pickledBluewood, size: 30.0),
+            padding: EdgeInsets.only(right: 10.0),
+            child: Consumer<LocaleModel>(
+              builder: (context, localeModel, child) => DropdownButton(
+                  value: selectedLocale,
+                  items: [
+                    DropdownMenuItem(
+                      child: Text('🇬🇧', style: TextStyle(fontSize: 22)),
+                      value: 'en',
+                    ),
+                    DropdownMenuItem(
+                      child: Text('🇹🇷', style: TextStyle(fontSize: 22)),
+                      value: 'tr',
+                    ),
+                  ],
+                  onChanged: (String? value) {
+                    if (value != null) {
+                      localeModel.set(Locale(value));
+                    }
+                  }),
             ),
-            */
-              ),
+          ),
           Padding(
             padding: EdgeInsets.only(right: 10.0),
             child: IconButton(

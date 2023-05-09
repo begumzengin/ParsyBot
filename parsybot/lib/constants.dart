@@ -26,12 +26,21 @@ final chatMessages = [
     "chatIndex": 0,
   },
   {
-    "msg": "Mehmet Haberal kimdir?",
+    "msg": "Başkent Üniversitesi okul takımlarına nasıl katılabilirim?",
     "chatIndex": 1,
   },
   {
     "msg":
-        "Mehmet Haberal, Türkiye'nin önde gelen hekimlerinden biridir. İstanbul Üniversitesi Tıp Fakültesi'nden mezun olan Haberal, ülkemizde organ nakli alanında çalışmalar yapan ilk hekimlerden biri olarak tanınmaktadır. Haberal, Türkiye'de organ nakli alanında çalışmalarının yanı sıra, çeşitli ülkelerde organ nakli konusunda konferanslar vermiş ve çeşitli ülkelerde organ nakli konusunda çalışmalar yürütmüştür. Ayrıca, Haberal, Türkiye'de organ nakli alanında çalışmalarının yanı sıra, çeşitli ülkelerde organ nakli konusunda konferanslar vermiş ve çeşitli ülkelerde organ nakli konusunda çalışmalar yürütmüştür. Haberal, Türkiye'de organ nakli alanında çalışmalarının yanı sıra, çeşitli ülkelerde organ nakli konusunda konferanslar vermiş ve çeşitli ülkelerde organ nakli konusunda çalışmalar yürütmüştür.",
+        "Başkent Üniversitesi okul takımlarına katılabilmek için duyurular takip edilmeli ve seçmelere katılım sağlanmalıdır.",
+    "chatIndex": 0,
+  },
+  {
+    "msg": "Resmi tatillerde kütüphaneye gidebilir miyim?",
+    "chatIndex": 1,
+  },
+  {
+    "msg":
+        "Başkent Üniversitesi ana kütüphanesi resmî tatillerde hizmet vermemektedir.",
     "chatIndex": 0,
   },
   {

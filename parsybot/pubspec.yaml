@@ -47,7 +47,6 @@ dependencies:
   flutter_spinkit: ^5.1.0
   firebase_auth: ^4.4.2
   firebase_core: ^2.10.0
-  file_picker: ^5.2.11
   shared_preferences: ^2.1.0
 
 dev_dependencies:

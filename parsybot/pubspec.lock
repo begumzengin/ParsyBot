@@ -85,13 +85,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.4"
-  file_picker:
-    dependency: "direct main"
-    description:
-      name: file_picker
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.2.11"
   firebase_auth:
     dependency: "direct main"
     description:
@@ -151,13 +144,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_plugin_android_lifecycle:
-    dependency: transitive
-    description:
-      name: flutter_plugin_android_lifecycle
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.13"
   flutter_spinkit:
     dependency: "direct main"
     description:

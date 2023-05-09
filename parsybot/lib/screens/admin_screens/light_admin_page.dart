@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:parsybot/model/locale.dart';
@@ -51,7 +52,7 @@ class LightAdminPage extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
                   t.existingDatasets,
-                  style: TextStyle(
+                  style: GoogleFonts.notoSansSiddham(
                       fontSize: 23.0,
                       fontWeight: FontWeight.bold,
                       color: pickledBluewood),
@@ -76,7 +77,8 @@ class LightAdminPage extends StatelessWidget {
                     itemCount: 5, // replace with actual dataset count
                     itemBuilder: (BuildContext context, int index) {
                       return ListTile(
-                        title: Text('Dataset ${index + 1}'),
+                        title: Text('Dataset ${index + 1}',
+                            style: GoogleFonts.notoSansSiddham()),
                         trailing: Wrap(
                           spacing: 10,
                           children: <Widget>[
@@ -100,7 +102,11 @@ class LightAdminPage extends StatelessWidget {
                   Widget>[
                 ElevatedButton(
                     onPressed: () {},
-                    child: Text(t.uploadDataset),
+                    child: Text(
+                      t.uploadDataset,
+                      style: GoogleFonts.notoSansSiddham(),
+                      textAlign: TextAlign.center,
+                    ),
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(cinnabar),
@@ -111,7 +117,11 @@ class LightAdminPage extends StatelessWidget {
                     )),
                 ElevatedButton(
                     onPressed: () {},
-                    child: Text(t.deleteDataset),
+                    child: Text(
+                      t.deleteDataset,
+                      style: GoogleFonts.notoSansSiddham(),
+                      textAlign: TextAlign.center,
+                    ),
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(cinnabar),
@@ -122,7 +132,11 @@ class LightAdminPage extends StatelessWidget {
                     )),
                 ElevatedButton(
                     onPressed: () {},
-                    child: Text(t.updateDataset),
+                    child: Text(
+                      t.updateDataset,
+                      style: GoogleFonts.notoSansSiddham(),
+                      textAlign: TextAlign.center,
+                    ),
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(cinnabar),
@@ -133,7 +147,11 @@ class LightAdminPage extends StatelessWidget {
                     )),
                 ElevatedButton(
                     onPressed: () {},
-                    child: Text(t.modelTraining),
+                    child: Text(
+                      t.modelTraining,
+                      style: GoogleFonts.notoSansSiddham(),
+                      textAlign: TextAlign.center,
+                    ),
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(cinnabar),

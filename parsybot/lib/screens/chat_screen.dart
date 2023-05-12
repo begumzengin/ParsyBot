@@ -1,10 +1,14 @@
-import 'dart:convert';
+import 'dart:developer';
+
+import 'package:provider/provider.dart';
 
 import '../constants.dart';
+import '../provider/chats_provider.dart';
 import '../util/chat_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:http/http.dart' as http;
+
+import '../util/text_widget.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -14,9 +18,11 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
-  final bool _isTyping = true;
+  bool _isTyping = false;
   late TextEditingController textEditingController;
-  String _response = '';
+  late ScrollController _listScrollController;
+  late FocusNode focusNode;
+  //String _response = '';
 
   /*
   void _sendMessage(String message) async {
@@ -42,74 +48,142 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void initState() {
     textEditingController = TextEditingController();
+    _listScrollController = ScrollController();
+    focusNode = FocusNode();
     super.initState();
   }
 
   @override
   void dispose() {
     textEditingController.dispose();
+    _listScrollController.dispose();
+    focusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final chatProvider = Provider.of<ChatProvider>(context);
     return Scaffold(
+        backgroundColor: sanMarino,
         appBar: AppBar(
           title: Text('ParsyBot', textAlign: TextAlign.center),
           backgroundColor: cinnabar,
           elevation: 0,
         ),
         body: SafeArea(
-            child: Column(
-          children: [
-            Flexible(
-                child: ListView.builder(
-                    itemCount: 5,
-                    itemBuilder: (context, index) {
-                      return ChatWidget(
-                          msg: _response,
-                          chatIndex: int.parse(
-                              chatMessages[index]["chatIndex"].toString()));
-                    })),
-            if (_isTyping) ...[
-              const SpinKitThreeBounce(
-                color: Color(0xffe2474b),
-                size: 18,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Material(
-                  child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Expanded(
-                              child: TextField(
-                            style: const TextStyle(color: Colors.white),
-                            controller: textEditingController,
-                            onSubmitted: (value) {},
-                            decoration: const InputDecoration.collapsed(
-                                hintText: "Sorunuzu gönderin!",
-                                hintStyle: TextStyle(color: Colors.grey)),
-                          )),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.mic_rounded,
-                              color: Color(0xffe2474b),
-                            ),
-                          ),
-                          IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.send,
-                                color: Color(0xffe2474b),
-                              ))
-                        ],
-                      )))
-            ]
+            child: Column(children: [
+          Flexible(
+              child: ListView.builder(
+                  controller: _listScrollController,
+                  itemCount: chatProvider.getChatList.length,
+                  itemBuilder: (context, index) {
+                    return ChatWidget(
+                        msg: chatProvider.getChatList[index].msg,
+                        chatIndex: chatProvider.getChatList[index].chatIndex);
+                  })),
+          if (_isTyping) ...[
+            const SpinKitThreeBounce(
+              color: Color(0xffe2474b),
+              size: 18,
+            ),
+            SizedBox(
+              height: 15,
+            ),
           ],
-        )));
+          Material(
+              child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          style: const TextStyle(color: Colors.black),
+                          controller: textEditingController,
+                          onSubmitted: (value) async {
+                            await sendMessageFCT(chatProvider: chatProvider);
+                          },
+                          decoration: const InputDecoration.collapsed(
+                              hintText: "how can i help you?",
+                              hintStyle: TextStyle(color: Colors.grey)),
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.mic_rounded,
+                          color: Color(0xffe2474b),
+                        ),
+                      ),
+                      IconButton(
+                          onPressed: () async {
+                            await sendMessageFCT(chatProvider: chatProvider);
+                          },
+                          icon: const Icon(
+                            Icons.send,
+                            color: Color(0xffe2474b),
+                          ))
+                    ],
+                  )))
+        ])));
+  }
+
+  void scrollListToEnd() {
+    _listScrollController.animateTo(
+        _listScrollController.position.maxScrollExtent,
+        duration: Duration(seconds: 2),
+        curve: Curves.easeOut);
+  }
+
+  Future<void> sendMessageFCT({required ChatProvider chatProvider}) async {
+    if (_isTyping) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: TextWidget(
+          label: "you can't send multiple messages at a time :(",
+        ),
+        backgroundColor: Colors.red,
+      ));
+      return;
+    }
+    if (textEditingController.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: TextWidget(
+          label: "please type a message :)",
+        ),
+        backgroundColor: Colors.red,
+      ));
+      return;
+    }
+    try {
+      String msg = textEditingController.text;
+      setState(() {
+        _isTyping = true;
+        //chatList.add(ChatModel(msg: textEditingController.text, chatIndex: 0));
+        chatProvider.addUserMessage(msg: msg);
+        textEditingController.clear();
+        focusNode.unfocus();
+      });
+      log("request has been sent");
+      await chatProvider.sendMessageAndGetAnswers(msg: msg);
+      /*
+      chatList.addAll(await ApiService.sendMessage(
+          message: textEditingController.text,
+          modelID: modelsProvider.getCurrentModel));
+          */
+      setState(() {});
+    } catch (e) {
+      log("error $e");
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: TextWidget(
+          label: e.toString(),
+        ),
+        backgroundColor: Colors.red,
+      ));
+    } finally {
+      setState(() {
+        scrollListToEnd();
+        _isTyping = false;
+      });
+    }
   }
 }

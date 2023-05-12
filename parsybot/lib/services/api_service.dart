@@ -53,8 +53,7 @@ class ApiService {
   */
 
   //send message
-  static Future<List<ChatModel>> sendMessage(
-      {required String message, required String modelID}) async {
+  static Future<List<ChatModel>> sendMessage({required String message}) async {
     try {
       //log("modelID $modelID");
       var response = await http.post(
@@ -75,7 +74,7 @@ class ApiService {
         throw HttpException(jsonResponse['error']['message']);
       }
       List<ChatModel> chatList = [];
-      if (jsonResponse.length > 0) {
+      if (jsonResponse.isNotEmpty) {
         //log("jsonResponse[choices]text ${jsonResponse["choices"][0]["text"]}");
         chatList = List.generate(
             1, (index) => ChatModel(msg: jsonResponse["answer"], chatIndex: 1));

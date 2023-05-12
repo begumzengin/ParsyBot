@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parsybot/constants.dart';
 import 'text_widget.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class ChatWidget extends StatelessWidget {
   const ChatWidget({super.key, required this.msg, required this.chatIndex});
@@ -27,7 +28,24 @@ class ChatWidget extends StatelessWidget {
                       width: 30,
                     ),
                     const SizedBox(width: 8),
-                    Expanded(child: TextWidget(label: msg)),
+                    Expanded(
+                        child: chatIndex == 0
+                            ? TextWidget(label: msg)
+                            : DefaultTextStyle(
+                                style: TextStyle(
+                                    color: Color(0xFFF3F6E8),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 16),
+                                child: AnimatedTextKit(
+                                    isRepeatingAnimation: false,
+                                    repeatForever: false,
+                                    displayFullTextOnTap: true,
+                                    totalRepeatCount: 1,
+                                    animatedTexts: [
+                                      TyperAnimatedText(msg.trim(),
+                                          speed: Duration(milliseconds: 30))
+                                    ]),
+                              )),
                   ],
                 )))
       ],

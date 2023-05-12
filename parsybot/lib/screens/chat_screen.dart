@@ -18,6 +18,7 @@ class _ChatScreenState extends State<ChatScreen> {
   late TextEditingController textEditingController;
   String _response = '';
 
+  /*
   void _sendMessage(String message) async {
     final url = Uri.parse('http://10.100.192.60:8080/chat');
     final response = await http.post(
@@ -36,6 +37,7 @@ class _ChatScreenState extends State<ChatScreen> {
       _response = jsonResponse['answer'];
     });
   }
+  */
 
   @override
   void initState() {
@@ -88,7 +90,7 @@ class _ChatScreenState extends State<ChatScreen> {
                             controller: textEditingController,
                             onSubmitted: (value) {},
                             decoration: const InputDecoration.collapsed(
-                                hintText: "Sorunuzu yazınız",
+                                hintText: "Sorunuzu gönderin!",
                                 hintStyle: TextStyle(color: Colors.grey)),
                           )),
                           IconButton(
@@ -99,10 +101,7 @@ class _ChatScreenState extends State<ChatScreen> {
                             ),
                           ),
                           IconButton(
-                              onPressed: () {
-                                _sendMessage(textEditingController.text);
-                                textEditingController.clear();
-                              },
+                              onPressed: () {},
                               icon: const Icon(
                                 Icons.send,
                                 color: Color(0xffe2474b),
@@ -114,4 +113,3 @@ class _ChatScreenState extends State<ChatScreen> {
         )));
   }
 }
-

@@ -48,10 +48,19 @@ dependencies:
   firebase_core: ^2.10.0
   http: ^0.13.5
   animated_text_kit: ^4.2.2
-
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.12.0
+
+flutter_icons:
+  android: true
+  ios: true
+  web:
+    generate: true
+    image_path: "assets/parsybot_images/parsy_logo.jpg"
+  image_path: "assets/parsybot_images/parsy_logo.jpg"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

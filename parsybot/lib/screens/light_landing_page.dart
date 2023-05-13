@@ -73,13 +73,6 @@ class _LandingPageState extends State<LandingPage> {
                   }),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(right: 10.0),
-            child: IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.dark_mode, color: pickledBluewood, size: 30.0),
-            ),
-          ),
         ],
       ),
       backgroundColor: lightBackground,

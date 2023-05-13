@@ -53,12 +53,6 @@ class _AdminLoginState extends State<AdminLogin> {
                         }
                       }),
                 )),
-            Padding(
-                padding: EdgeInsets.only(right: 30.0),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.dark_mode, color: pickledBluewood, size: 30),
-                ))
           ],
         ),
         backgroundColor: lightBackground,

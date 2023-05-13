@@ -104,7 +104,7 @@ class _ChatScreenState extends State<ChatScreen> {
                             await sendMessageFCT(chatProvider: chatProvider);
                           },
                           decoration: const InputDecoration.collapsed(
-                              hintText: "how can i help you?",
+                              hintText: "Size nasıl yardımcı olabilirim?",
                               hintStyle: TextStyle(color: Colors.grey)),
                         ),
                       ),
@@ -139,7 +139,7 @@ class _ChatScreenState extends State<ChatScreen> {
     if (_isTyping) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: TextWidget(
-          label: "you can't send multiple messages at a time :(",
+          label: "Aynı anda birden çok mesaj gönderemezsiniz.",
         ),
         backgroundColor: Colors.red,
       ));
@@ -148,7 +148,7 @@ class _ChatScreenState extends State<ChatScreen> {
     if (textEditingController.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: TextWidget(
-          label: "please type a message :)",
+          label: "Lütfen bir mesaj gönderiniz.",
         ),
         backgroundColor: Colors.red,
       ));

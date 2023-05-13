@@ -57,7 +57,7 @@ class ApiService {
     try {
       //log("modelID $modelID");
       var response = await http.post(
-        Uri.parse('http://192.168.1.13:8080/chat'),
+        Uri.parse('http://10.100.192.60:8080/chat'),
         headers: {
           'Content-type': 'application/json',
           'Access-Control-Allow-Origin': '*',

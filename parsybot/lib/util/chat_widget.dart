@@ -14,7 +14,8 @@ class ChatWidget extends StatefulWidget {
 }
 
 class _ChatWidgetState extends State<ChatWidget> {
-  bool _hasBeenPressed = false;
+  bool _hasBeenPressedUp = false;
+  bool _hasBeenPressedDown = false;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                           speed: Duration(milliseconds: 30))
                                     ]),
                               )),
-                    widget.chatIndex == 1
+                    widget.chatIndex == 0
                         ? const SizedBox.shrink()
                         : Row(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -62,10 +63,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                               IconButton(
                                 icon: Icon(Icons.thumb_up_alt_outlined),
                                 color:
-                                    _hasBeenPressed ? cinnabar : Colors.white,
+                                    _hasBeenPressedUp ? cinnabar : Colors.white,
                                 onPressed: () {
                                   setState(() {
-                                    _hasBeenPressed = !_hasBeenPressed;
+                                    _hasBeenPressedUp = !_hasBeenPressedUp;
                                   });
                                 },
                               ),
@@ -73,10 +74,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                               IconButton(
                                 icon: Icon(Icons.thumb_down_alt_outlined),
                                 color:
-                                    _hasBeenPressed ? cinnabar : Colors.white,
+                                    _hasBeenPressedDown ? cinnabar : Colors.white,
                                 onPressed: () {
                                   setState(() {
-                                    _hasBeenPressed = !_hasBeenPressed;
+                                    _hasBeenPressedDown = !_hasBeenPressedDown;
                                   });
                                 },
                               ),

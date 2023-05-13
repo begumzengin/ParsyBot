@@ -21,8 +21,8 @@ class ChatWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.asset(
-                      chatIndex == 1
-                          ? 'assets/parsybot_images/usericon2.png'
+                      chatIndex == 0
+                          ? 'assets/parsybot_images/question_mark.png'
                           : 'assets/parsybot_images/parsy_kafasi.png',
                       height: 30,
                       width: 30,

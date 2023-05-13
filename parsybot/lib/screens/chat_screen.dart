@@ -65,7 +65,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     final chatProvider = Provider.of<ChatProvider>(context);
     return Scaffold(
-        backgroundColor: sanMarino,
+        backgroundColor: lightBackground,
         appBar: AppBar(
           title: Text('ParsyBot', textAlign: TextAlign.center),
           backgroundColor: cinnabar,

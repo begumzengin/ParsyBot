@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:parsybot/constants.dart';
+import 'package:parsybot/screens/about_us.dart';
 import 'package:parsybot/screens/faq_page.dart';
 import 'package:parsybot/screens/light_landing_page.dart';
 import 'package:parsybot/screens/sss_page.dart';
@@ -75,6 +76,7 @@ class _MyAppState extends State<MyApp> {
             '/': (context) => LandingPage(),
             '/faq': (context) => FaqPage(),
             '/sss': (context) => SssPage(),
+            '/ahout_us': (context) => AboutUs(),
           },
           debugShowCheckedModeBanner: false,
           theme: ThemeData(

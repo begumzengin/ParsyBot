@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
+import 'package:http/io_client.dart';
 
 import '../model/chat_model.dart';
 
@@ -56,8 +57,9 @@ class ApiService {
   static Future<List<ChatModel>> sendMessage({required String message}) async {
     try {
       //log("modelID $modelID");
+
       var response = await http.post(
-        Uri.parse('http://10.100.192.60:8080/chat'),
+        Uri.parse('https://10.100.192.60:8080/chat'),
         headers: {
           'Content-type': 'application/json',
           'Access-Control-Allow-Origin': '*',

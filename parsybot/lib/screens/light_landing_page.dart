@@ -1,6 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:parsybot/screens/about_us.dart';
 import 'package:parsybot/screens/chat_screen.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:parsybot/util/button_row.dart';
@@ -41,6 +42,16 @@ class _LandingPageState extends State<LandingPage> {
         backgroundColor: lightBackground,
         iconTheme: IconThemeData(color: pickledBluewood),
         actions: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(right: 10.0),
+            child: IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: ((context) => AboutUs())));
+                },
+                icon: Icon(Icons.group_outlined,
+                    color: pickledBluewood, size: 30.0)),
+          ),
           Padding(
             padding: EdgeInsets.only(right: 10.0),
             child: IconButton(

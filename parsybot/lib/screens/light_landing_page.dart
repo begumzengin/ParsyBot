@@ -46,8 +46,7 @@ class _LandingPageState extends State<LandingPage> {
             padding: EdgeInsets.only(right: 10.0),
             child: IconButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: ((context) => AboutUs())));
+                  Navigator.pushNamed(context, '/about_us');
                 },
                 icon: Icon(Icons.group_outlined,
                     color: pickledBluewood, size: 30.0)),

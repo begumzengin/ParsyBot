@@ -76,7 +76,7 @@ class _MyAppState extends State<MyApp> {
             '/': (context) => LandingPage(),
             '/faq': (context) => FaqPage(),
             '/sss': (context) => SssPage(),
-            '/ahout_us': (context) => AboutUs(),
+            '/about_us': (context) => AboutUs(),
           },
           debugShowCheckedModeBanner: false,
           theme: ThemeData(

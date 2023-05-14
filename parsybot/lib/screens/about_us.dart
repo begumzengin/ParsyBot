@@ -61,12 +61,12 @@ class _AboutUsState extends State<AboutUs> {
             Image.asset('assets/parsybot_images/about_us.png'),
             SizedBox(height: 30),
             Text(
-              'ParsyBot, bitirme projesi olarak Feride Nursena Cavlı, \nZeynep Karkıner, Begüm Yaman ve Begüm Zengin tarafından\nDoç. Dr. Mustafa Sert danışmanlığında hayata geçirilmiştir.',
+              t.aboutUs,
               style: GoogleFonts.mulish(),
             ),
             SizedBox(height: 30),
             Text(
-              'İletişim',
+              t.contactUs,
               style: GoogleFonts.mulish(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),

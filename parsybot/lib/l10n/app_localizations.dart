@@ -278,6 +278,18 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Veri Kümesi Yükle'**
   String get uploadDataset;
+
+  /// No description provided for @contactUs.
+  ///
+  /// In tr, this message translates to:
+  /// **'İletişim'**
+  String get contactUs;
+
+  /// No description provided for @aboutUs.
+  ///
+  /// In tr, this message translates to:
+  /// **'ParsyBot, bitirme projesi olarak Feride Nursena Cavlı,\nZeynep Karkıner, Begüm Yaman ve Begüm Zengin tarafından\nDoç. Dr. Mustafa Sert danışmanlığında hayata geçirilmiştir.'**
+  String get aboutUs;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

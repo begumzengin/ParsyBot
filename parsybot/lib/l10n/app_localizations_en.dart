@@ -96,4 +96,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get uploadDataset => 'Upload Dataset';
+
+  @override
+  String get contactUs => 'Contact';
+
+  @override
+  String get aboutUs => 'ParsyBot was developed as a graduation project by Feride Nursena \nCavlı, Zeynep Karkıner, Begüm Yaman, and Begüm Zengin, under\nthe supervision of Assoc. Prof. Mustafa Sert.';
 }

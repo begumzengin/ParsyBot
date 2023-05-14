@@ -30,5 +30,7 @@
     "updateDataset": "Update Dataset",
     "modelTraining": "Model Training",
     "existingDatasets": "Existing Datasets",
-    "uploadDataset": "Upload Dataset"
+    "uploadDataset": "Upload Dataset",
+    "contactUs": "Contact",
+    "aboutUs": "ParsyBot was developed as a graduation project by Feride Nursena \nCavlı, Zeynep Karkıner, Begüm Yaman, and Begüm Zengin, under\nthe supervision of Assoc. Prof. Mustafa Sert."
 }

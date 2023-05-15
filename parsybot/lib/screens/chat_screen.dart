@@ -152,7 +152,10 @@ class _ChatScreenState extends State<ChatScreen> {
                       ),
                       IconButton(
                           onPressed: () async {
+                            _isListening = false;
+                            _speech.stop();
                             await sendMessageFCT(chatProvider: chatProvider);
+                            textEditingController.clear();
                           },
                           icon: const Icon(
                             Icons.send,
@@ -166,7 +169,7 @@ class _ChatScreenState extends State<ChatScreen> {
   void scrollListToEnd() {
     _listScrollController.animateTo(
         _listScrollController.position.maxScrollExtent,
-        duration: Duration(seconds: 2),
+        duration: Duration(seconds: 3),
         curve: Curves.easeOut);
   }
 
@@ -223,7 +226,6 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   void onListen() async {
-    var t = AppLocalizations.of(context)!;
     var selectedLocale = Localizations.localeOf(context).toString();
     if (!_isListening) {
       bool available = await _speech.initialize(
@@ -243,9 +245,9 @@ class _ChatScreenState extends State<ChatScreen> {
       } else {
         setState(() {
           _isListening = false;
-          _speech.stop();
-          textEditingController.dispose();
+          textEditingController.clear();
         });
+        _speech.stop();
       }
     }
   }

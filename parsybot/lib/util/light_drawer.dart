@@ -42,6 +42,13 @@ class LightDrawer extends StatelessWidget {
     }
   }
 
+  Future<void> _launchUrl(String _url) async {
+    final Uri _myUrl = Uri.parse(_url);
+    if (!await launchUrl(_myUrl)) {
+      throw 'Could not launch $_url';
+    }
+  }
+
   const LightDrawer({super.key});
 
   @override
@@ -156,7 +163,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://dis.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.pharmacyTitle,
@@ -164,7 +173,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://ecz.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.educationTitle,
@@ -172,7 +183,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://egitim.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.scienceAndLettersTitle,
@@ -180,7 +193,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://fef.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.fineArtsDesignArchTitle,
@@ -188,7 +203,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://gsf.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.lawTitle,
@@ -196,7 +213,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://hukuk.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.economicsAdministrativeTitle,
@@ -204,7 +223,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://iibf.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.communicationTitle,
@@ -212,7 +233,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://ilf.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.engineeringTitle,
@@ -220,7 +243,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://muh.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.healthSciencesTitle,
@@ -228,7 +253,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://sbf.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.commercialScienceTitle,
@@ -236,7 +263,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://tbf.baskent.edu.tr/kw/index.php");
+                  },
                 ),
                 ListTile(
                   title: Text(t.medicineTitle,
@@ -244,7 +273,9 @@ class LightDrawer extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           letterSpacing: 0.6,
                           fontSize: 15)),
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl("https://tip.baskent.edu.tr/kw/index.php");
+                  },
                 ),
               ]),
         ],

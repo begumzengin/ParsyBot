@@ -3,6 +3,8 @@ import 'dart:developer';
 import 'package:provider/provider.dart';
 
 import '../constants.dart';
+import '../l10n/app_localizations.dart';
+import '../model/locale.dart';
 import '../provider/chats_provider.dart';
 import '../util/chat_widget.dart';
 import 'package:flutter/material.dart';
@@ -49,28 +51,6 @@ class _ChatScreenState extends State<ChatScreen> {
   }
   */
 
-  void onListen() async {
-    if (!_isListening) {
-      bool available = await _speech.initialize(
-          onStatus: (val) => print('onStatus: $val'),
-          onError: (val) => print('onError: $val'));
-      if (available) {
-        setState(() {
-          _isListening = true;
-        });
-        _speech.listen(
-            onResult: (val) => setState(() {
-                  textEditingController.text = val.recognizedWords;
-                }));
-      } else {
-        setState(() {
-          _isListening = false;
-          _speech.stop();
-        });
-      }
-    }
-  }
-
   @override
   void initState() {
     textEditingController = TextEditingController();
@@ -90,6 +70,8 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
+    var selectedLocale = Localizations.localeOf(context).toString();
     final chatProvider = Provider.of<ChatProvider>(context);
     return Scaffold(
         backgroundColor: lightBackground,
@@ -97,6 +79,30 @@ class _ChatScreenState extends State<ChatScreen> {
           title: Text('ParsyBot', textAlign: TextAlign.center),
           backgroundColor: cinnabar,
           elevation: 0,
+          actions: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(right: 10.0),
+              child: Consumer<LocaleModel>(
+                builder: (context, localeModel, child) => DropdownButton(
+                    value: selectedLocale,
+                    items: [
+                      DropdownMenuItem(
+                        child: Text('🇬🇧', style: TextStyle(fontSize: 22)),
+                        value: 'en',
+                      ),
+                      DropdownMenuItem(
+                        child: Text('🇹🇷', style: TextStyle(fontSize: 22)),
+                        value: 'tr',
+                      ),
+                    ],
+                    onChanged: (String? value) {
+                      if (value != null) {
+                        localeModel.set(Locale(value));
+                      }
+                    }),
+              ),
+            ),
+          ],
         ),
         body: SafeArea(
             child: Column(children: [
@@ -213,6 +219,34 @@ class _ChatScreenState extends State<ChatScreen> {
         scrollListToEnd();
         _isTyping = false;
       });
+    }
+  }
+
+  void onListen() async {
+    var t = AppLocalizations.of(context)!;
+    var selectedLocale = Localizations.localeOf(context).toString();
+    if (!_isListening) {
+      bool available = await _speech.initialize(
+          onStatus: (val) => print('onStatus: $val'),
+          onError: (val) => print('onError: $val'));
+      if (available) {
+        setState(() {
+          _isListening = true;
+        });
+        _speech.listen(
+          onResult: (val) => setState(() {
+            _textSpeech = val.recognizedWords;
+            textEditingController.text = _textSpeech;
+          }),
+          localeId: selectedLocale,
+        );
+      } else {
+        setState(() {
+          _isListening = false;
+          _speech.stop();
+          textEditingController.dispose();
+        });
+      }
     }
   }
 }

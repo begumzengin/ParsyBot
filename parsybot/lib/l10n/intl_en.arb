@@ -32,5 +32,6 @@
     "existingDatasets": "Existing Datasets",
     "uploadDataset": "Upload Dataset",
     "contactUs": "Contact",
-    "aboutUs": "ParsyBot was developed as a graduation project by Feride Nursena \nCavlı, Zeynep Karkıner, Begüm Yaman, and Begüm Zengin, under\nthe supervision of Assoc. Prof. Mustafa Sert."
+    "aboutUs": "ParsyBot was developed as a graduation project by Feride Nursena \nCavlı, Zeynep Karkıner, Begüm Yaman, and Begüm Zengin, under\nthe supervision of Assoc. Prof. Mustafa Sert.",
+    "chatHintText": "How can I help you?"
 }

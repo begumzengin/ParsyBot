@@ -136,8 +136,8 @@ class _ChatScreenState extends State<ChatScreen> {
                           onSubmitted: (value) async {
                             await sendMessageFCT(chatProvider: chatProvider);
                           },
-                          decoration: const InputDecoration.collapsed(
-                              hintText: "Size nasıl yardımcı olabilirim?",
+                          decoration: InputDecoration.collapsed(
+                              hintText: t.chatHintText,
                               hintStyle: TextStyle(color: Colors.grey)),
                         ),
                       ),

@@ -290,6 +290,12 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'ParsyBot, bitirme projesi olarak Feride Nursena Cavlı,\nZeynep Karkıner, Begüm Yaman ve Begüm Zengin tarafından\nDoç. Dr. Mustafa Sert danışmanlığında hayata geçirilmiştir.'**
   String get aboutUs;
+
+  /// No description provided for @chatHintText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Size nasıl yardımcı olabilirim?'**
+  String get chatHintText;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -7,6 +7,7 @@ import '../provider/chats_provider.dart';
 import '../util/chat_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 import '../util/text_widget.dart';
 
@@ -21,7 +22,10 @@ class _ChatScreenState extends State<ChatScreen> {
   bool _isTyping = false;
   late TextEditingController textEditingController;
   late ScrollController _listScrollController;
+  late stt.SpeechToText _speech;
+  bool _isListening = false;
   late FocusNode focusNode;
+  String _textSpeech = '';
   //String _response = '';
 
   /*
@@ -45,11 +49,34 @@ class _ChatScreenState extends State<ChatScreen> {
   }
   */
 
+  void onListen() async {
+    if (!_isListening) {
+      bool available = await _speech.initialize(
+          onStatus: (val) => print('onStatus: $val'),
+          onError: (val) => print('onError: $val'));
+      if (available) {
+        setState(() {
+          _isListening = true;
+        });
+        _speech.listen(
+            onResult: (val) => setState(() {
+                  textEditingController.text = val.recognizedWords;
+                }));
+      } else {
+        setState(() {
+          _isListening = false;
+          _speech.stop();
+        });
+      }
+    }
+  }
+
   @override
   void initState() {
     textEditingController = TextEditingController();
     _listScrollController = ScrollController();
     focusNode = FocusNode();
+    _speech = stt.SpeechToText();
     super.initState();
   }
 
@@ -109,7 +136,9 @@ class _ChatScreenState extends State<ChatScreen> {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          onListen();
+                        },
                         icon: Icon(
                           Icons.mic_rounded,
                           color: Color(0xffe2474b),

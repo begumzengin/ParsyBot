@@ -101,7 +101,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get contactUs => 'İletişim';
 
   @override
-  String get aboutUs => 'ParsyBot, bitirme projesi olarak Feride Nursena Cavlı,\nZeynep Karkıner, Begüm Yaman ve Begüm Zengin tarafından\nDoç. Dr. Mustafa Sert danışmanlığında hayata geçirilmiştir.';
+  String get aboutUs => 'ParsyBot, bitirme projesi olarak Feride Nursena Cavlı, Zeynep Karkıner, Begüm Yaman ve Begüm Zengin tarafından Doç. Dr. Mustafa Sert danışmanlığında hayata geçirilmiştir.';
 
   @override
   String get chatHintText => 'Size nasıl yardımcı olabilirim?';

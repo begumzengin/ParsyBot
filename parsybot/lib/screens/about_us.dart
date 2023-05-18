@@ -57,9 +57,13 @@ class _AboutUsState extends State<AboutUs> {
             Image.asset('assets/parsybot_images/about_us.png',
                 height: 250, width: 200),
             SizedBox(height: 30),
-            Text(
-              t.aboutUs,
-              style: GoogleFonts.mulish(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                t.aboutUs,
+                style: GoogleFonts.mulish(),
+                textAlign: TextAlign.justify,
+              ),
             ),
             SizedBox(height: 30),
             Text(
@@ -67,12 +71,9 @@ class _AboutUsState extends State<AboutUs> {
               style: GoogleFonts.mulish(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.only(left: 3),
-              child: Text(
-                  'msert@baskent.edu.tr\nfnursena.cavli@gmail.com\nzeynepkarkiner@gmail.com\n14begumyaman@gmail.com\nbegumzengin1@gmail.com',
-                  style: GoogleFonts.mulish()),
-            )
+            Text(
+                'msert@baskent.edu.tr\nfnursena.cavli@gmail.com\nzeynepkarkiner@gmail.com\n14begumyaman@gmail.com\nbegumzengin1@gmail.com',
+                style: GoogleFonts.mulish())
           ],
         ),
       ),

@@ -288,7 +288,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutUs.
   ///
   /// In tr, this message translates to:
-  /// **'ParsyBot, bitirme projesi olarak Feride Nursena Cavlı,\nZeynep Karkıner, Begüm Yaman ve Begüm Zengin tarafından\nDoç. Dr. Mustafa Sert danışmanlığında hayata geçirilmiştir.'**
+  /// **'ParsyBot, bitirme projesi olarak Feride Nursena Cavlı, Zeynep Karkıner, Begüm Yaman ve Begüm Zengin tarafından Doç. Dr. Mustafa Sert danışmanlığında hayata geçirilmiştir.'**
   String get aboutUs;
 
   /// No description provided for @chatHintText.

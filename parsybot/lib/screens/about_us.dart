@@ -18,10 +18,6 @@ class _AboutUsState extends State<AboutUs> {
   Widget build(BuildContext context) {
     var t = AppLocalizations.of(context)!;
     var selectedLocale = Localizations.localeOf(context).toString();
-    final targetPlatform = Theme.of(context).platform;
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
-    bool showDrawer;
 
     return Scaffold(
       appBar: AppBar(
@@ -57,8 +53,9 @@ class _AboutUsState extends State<AboutUs> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 20),
-            Image.asset('assets/parsybot_images/about_us.png'),
+            SizedBox(height: 10),
+            Image.asset('assets/parsybot_images/about_us.png',
+                height: 250, width: 200),
             SizedBox(height: 30),
             Text(
               t.aboutUs,

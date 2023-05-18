@@ -1,7 +1,6 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parsybot/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:parsybot/screens/about_us.dart';
 import 'package:parsybot/screens/chat_screen.dart';
 import 'package:parsybot/screens/light_admin_login.dart';
 import 'package:parsybot/util/button_row.dart';

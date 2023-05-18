@@ -67,9 +67,12 @@ class _AboutUsState extends State<AboutUs> {
               style: GoogleFonts.mulish(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),
-            Text(
-                'msert@baskent.edu.tr\nfnursena.cavli@gmail.com\nzeynepkarkiner@gmail.com\n14begumyaman@gmail.com\nbegumzengin1@gmail.com',
-                style: GoogleFonts.mulish())
+            Padding(
+              padding: const EdgeInsets.only(left: 3),
+              child: Text(
+                  'msert@baskent.edu.tr\nfnursena.cavli@gmail.com\nzeynepkarkiner@gmail.com\n14begumyaman@gmail.com\nbegumzengin1@gmail.com',
+                  style: GoogleFonts.mulish()),
+            )
           ],
         ),
       ),
